@@ -40,18 +40,17 @@ from distutils.file_util import move_file
 class Software:
     """ general software """
     type = 'Software'
-                                                                                                                             
+
     name = None
     download_url = None
     filename = None
     parent = None
 
     destination = 'downloads'
-                                                                                                                             
+
     def __init__(self, name, download_url):
         self.name = name
         self.download_url = download_url
-
 
 
 class Bundle(Software):
@@ -240,19 +239,7 @@ class Plone:
 
         if not self.parameters.given('build'): return
 
-        # check if we have products only
-        got = map(lambda x: (x.type, x), self.data)
-
-        # check if we only got products
-        products = filter(lambda x: x[0] == 'ZProduct', got)
-        products = len(products) == len(got)
-
-        if products:
-            # if we only have products reset their destination
-            for ob in got:
-                ob[1].destination=''
-        else: pass
-        got = map(lambda x: x[1], got)
+        got = self.data 
 
         items = []
         def expand(ob):
@@ -264,6 +251,20 @@ class Plone:
                                                              
         # expand bundles
         map(lambda x: expand(x), got)
+
+        # check if we have products only
+        items = map(lambda x: (x.type, x), items)
+
+        # check if we only got products
+        products = filter(lambda x: x[0] == 'ZProduct', items)
+        products = len(products) == len(items)
+                                                             
+        if products:
+            # if we only have products reset their destination
+            for ob in items:
+                ob[1].destination=''
+        else: pass
+        items = map(lambda x: x[1], items)
 
         # move stuff to their destinations
         for ob in items:
