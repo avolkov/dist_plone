@@ -16,25 +16,25 @@ PLONE_CORE = [
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tgz'),
-    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0.2.tar.gz'),
-    ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool-1.5.0.tgz'),
+    ZProduct('CMFFormController', 'http://osdn.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tgz'),
+    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/CMFPlone-2.0.2.tar.gz'),
+    ZProduct('CMFQuickInstallerTool', 'http://osdn.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool-1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
-    ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tgz'),
+    ZProduct('GroupUserFolder', 'http://osdn.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tgz'),
     ZProduct('PlacelessTranslationService', 'http://osdn.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc7.tar.gz'),
-    ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
+    ZProduct('PloneErrorReporting', 'http://osdn.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
     ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.4.tar.gz'),
     ]
 
 ADDONS = [
-    Bundle('Archetypes',  'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.2.5-rc4.tgz',
+    Bundle('Archetypes',  'http://osdn.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.2.5-rc4.tgz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
            }
     ),
     Bundle('PortalTransforms',
-           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.4.tgz',
+           'http://osdn.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.4.tgz',
            {'PortalTransforms': ZProduct,}
     ),
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.7.2/ExternalEditor-0.7.2-src.tgz'),
