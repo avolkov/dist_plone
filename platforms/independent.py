@@ -16,7 +16,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('BTreeFolder2', 'http://hathaway.freezope.org/Software/BTreeFolder2/BTreeFolder2-1.0.tar.gz'),
+    ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     Bundle('CMFActionIcons',
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
