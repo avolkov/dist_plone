@@ -8,7 +8,7 @@ ARCHETYPES_BASE = BASE + 'archetypes/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://zope.org/Products/CMF/CMF-1.4.6/CMF-1.4.6.tar.gz',
+           'http://zope.org/Products/CMF/CMF-1.4.7/CMF-1.4.7.tar.gz',
            { 'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
              'CMFDefault' : ZProduct,
