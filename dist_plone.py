@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.12 $, $Date: 2004/05/05 01:50:32 $
+# $Revision: 1.13 $, $Date: 2004/05/06 09:57:16 $
 """
 This script:
 
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.12 $"[11:-1]
+__version__ = "$Revision: 1.13 $"[11:-1]
 
 class Software:
     """ general software """
@@ -394,6 +394,15 @@ class Plone:
         for ob in self.data:
             filename = ob.filename
             os.unlink(filename)
+
+        # check for empty folders in base
+        for f in os.listdir(self.basefolder):
+            f=os.path.join(self.basefolder, f)
+            if not os.path.isdir(f): continue
+            else:
+                if not len(os.listdir(f)):
+                    # remove empty folders
+                    remove_tree(f)  
 
         # create new package
         name = 'Plone'
