@@ -21,7 +21,7 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool-1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tgz'),
-    ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc6.tgz'),
+    ZProduct('PlacelessTranslationService', 'http://osdn.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc7.tar.gz'),
     ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
     ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.1.tar.gz'),
     ]
