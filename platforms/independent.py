@@ -1,8 +1,13 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
-#PLONE_BASE = BASE + 'plone/'
-PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly/'
+BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
+#BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
+#BASE = 'http://belnet.dl.sourceforge.net/sourceforge/'
+
+PLONE_BASE = BASE + 'plone/'
+#PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly/'
+#PLONE_BASE = 'http://localhost/plone/'
+
 PLONE_I18N_BASE = BASE + 'plone-i18n/'
 COLLECTIVE_BASE = BASE + 'collective/'
 ARCHETYPES_BASE = BASE + 'archetypes/'
@@ -17,27 +22,27 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     Bundle('CMFActionIcons',
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.3-beta.tar.gz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.4.tar.gz'),
-    ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.0.tgz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.5-rc2.tar.gz'),
+    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.4-RC1.tar.gz'),
+    ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.1.tgz'),
+    ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-2.0.1.tgz'),
-    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0-rc8.tar.gz'),
+    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.5.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.6.tar.gz'),
 #    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
-    ]
+]
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.8/ExternalEditor-0.8-src.tgz'),
-    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.2.tar.gz'),
-##    ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6799a2e8aec0edc19a6a1f2682ac8a4a/kupu-1.1.tgz')
-    ]
+    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.5.tar.gz'),
+#    ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6799a2e8aec0edc19a6a1f2682ac8a4a/kupu-1.1.tgz')
+]
 
 AT1_2 = [
     Bundle('Archetypes',  ARCHETYPES_BASE + 'Archetypes-1.2.5-rc5.tar.gz',
@@ -51,10 +56,10 @@ AT1_2 = [
     #       ARCHETYPES_BASE + 'PortalTransforms-1.0.4.tgz',
     #       {'PortalTransforms': ZProduct,}
     #    ),
-    ]
+]
 
 AT1_3 = [
-    Bundle('Archetypes',  ARCHETYPES_BASE + 'Archetypes-1.3.0-beta5.tar.gz',
+    Bundle('Archetypes',  ARCHETYPES_BASE + 'Archetypes-1.3.1.tar.gz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
@@ -62,7 +67,7 @@ AT1_3 = [
              'MimetypesRegistry': ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', COLLECTIVE_BASE + 'ATCT-0.2beta8.tar.gz'),
+    ZProduct('ATContentTypes', COLLECTIVE_BASE + 'ATContentTypes-0.2-rc3.tar.gz'),
 ]
 
 
@@ -76,7 +81,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.4/Python-2.3.4.tgz')
-    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.2/Zope-2.7.2.tgz')
+    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.3/Zope-2.7.3.tgz')
 
     # plone core
     core   = PLONE_CORE
