@@ -1,3 +1,32 @@
+# Plone packaging script, by Simon Eisenmann, 2004.
+# 
+# This script:
+#  
+# 1) Gets the PloneBase-X.Y tarball (contains only CMFPlone dir, nothing 
+#    else) from SF.net (I would like to move it away from SF, though - since
+#    it's not meant for public consumption).
+#  
+# 2) Adds the Plone Core specified products, and creates PloneCore-X.Y
+#  
+# 3) Adds the cross-platform additions that consitute Plone, and creates 
+#    Plone-X.Y
+#  
+# The installers are normally built on top of [3]. Plone Core[2] is for 
+# people who just want the minimal Plone install with minimal dependencies, 
+# aka. People Who Know What They Want.
+#  
+# Which means any platform-specific installers:
+#  
+# a) Get Plone-X.Y.tgz [3]
+# 
+# b) Add their platform-specific additions (PIL, win32all, etc)
+# 
+# c) Create the installer
+#
+# Read http://plone.org/development/teams/release/ for definitions and 
+# further explanations.
+#
+# -- Alexander Limi
 
 import time
 import os, getopt, sys
