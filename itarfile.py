@@ -38,13 +38,13 @@
 """Read from and write to tar format archives.
 """
 
-__version__ = "$Revision: 1.8.12.2 $"
+__version__ = "$Rev: 1.8.12.2 $"
 # $Source: /cvsroot/python/python/dist/src/Lib/tarfile.py,v $
 
 version     = "0.6.4"
 __author__  = "Lars Gustäbel (lars@gustaebel.de)"
-__date__    = "$Date: 2003/11/06 13:57:49 $"
-__cvsid__   = "$Id: tarfile.py,v 1.8.12.2 2003/11/06 13:57:49 anthonybaxter Exp $"
+__date__    = "$Date: 2004-05-06 11:57:16 +0200 (Thu, 06 May 2004) $"
+__cvsid__   = "$Id$"
 __credits__ = "Gustavo Niemeyer, Niels Gustäbel, Richard Townsend."
 
 #---------

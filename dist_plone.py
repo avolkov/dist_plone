@@ -2,7 +2,8 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.15 $, $Date: 2004/05/11 10:11:48 $
+# $Rev: 1.15 $
+# $Date: 2004-05-11 19:14:24 +0200 (Tue, 11 May 2004) $
 """
 This script:
 
