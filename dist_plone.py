@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.10 $, $Date: 2004/03/21 22:05:28 $
+# $Revision: 1.11 $, $Date: 2004/05/04 22:14:16 $
 """
 This script:
 
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.10 $"[11:-1]
+__version__ = "$Revision: 1.11 $"[11:-1]
 
 class Software:
     """ general software """
@@ -63,7 +63,7 @@ class Bundle(Software):
     """ a archive which contains multiple other parts """
 
     type = 'Bundle'
-    items = []
+    items = None
 
     destination = 'downloads'
 
@@ -73,6 +73,7 @@ class Bundle(Software):
 
         Software.__init__(self, name, download_url)
 
+        self.items = []
         for n, k in mapping.items():
             c = k(n, None)
             c.parent = self # set ourselfs as source for this file
@@ -269,7 +270,8 @@ class Plone:
 
         dist = self.parameters.dist
         walk = ('core',)
-        if not self.parameters.given('core'): walk=walk+('addons', )
+        if not self.parameters.given('core'): 
+	    walk=walk+('addons', )
 
         for w in walk:
             cur = getattr(dist, w, [])
@@ -328,7 +330,8 @@ class Plone:
             mkpath(destination, verbose=1)
 
             # extract the files
-            print "Processing %s %s." % (ob.type, visible_name)
+            print "Processing %s %s\n%s." % (ob.type, visible_name, filename)
+		
             tar=tarfile.open(filename)
             base=''
             for f in tar.getmembers():

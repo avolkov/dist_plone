@@ -16,19 +16,18 @@ PLONE_CORE = [
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tar.gz'),
-    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0.1.tar.gz'),
-    ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool_1.5.0.tgz'),
+    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tgz'),
+    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0.1.tgz'),
+    ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool-1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
-    ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tar.gz'),
-    ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc6.tar.gz'),
+    ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tgz'),
+    ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc6.tgz'),
     ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
-    ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.1.tar.gz'),
+    ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.2.tgz'),
     ]
 
 ADDONS = [
-    Bundle('Archetypes',
-           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.3.0-b2.tgz',
+    Bundle('Archetypes', 'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.3.0_b2.tgz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
