@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.1 $, $Date: 2004/03/13 22:08:48 $
+# $Revision: 1.7 $, $Date: 2004/03/18 10:50:19 $
 """
 This script:
   
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.9$"[11:-1]
+__version__ = "$Revision: 1.7 $"[11:-1]
 
 class Software:
     """ general software """
@@ -108,20 +108,18 @@ class Parameters:
 
 
 USAGE="""Plone Distribution script %s.
-Usage: python2.3 dist_plone.py [OPTION]...
- 
-When given no argument the script downloads anything from package
-and platform independent definition to ./build.
- 
-Parameters:
+Usage: python2.3 dist_plone.py [--download|--build] [OPTION]...
+
+%sParameters:
   --help                   display this usage information and exit.
   --target=TARGET          selects package definition to use.
   --dest=DESTINATION       destination folder (default is ./build).
   --core                   use minimal mode.
-  --build                  builds tarball instead of downloading only.
+  --build                  builds tarball mode.
+  --download               download only mode.
 
 Mail bug reports and suggestions to <simon@longsleep.org>.
-""" % __version__
+"""
 
 
 class Plone:
@@ -133,7 +131,7 @@ class Plone:
 
     # getopt command line parameters
     short_options = ""
-    long_options = ["help", "target=", "dest=", "core", "build"]
+    long_options = ["help", "target=", "dest=", "core", "build", "download"]
 
     def setup(self):
         self.basefolder = tempfile.mkdtemp()
@@ -148,8 +146,8 @@ class Plone:
         print "command is %s" % repr(command)
         os.system(command)
 
-    def usage(self):
-        print USAGE 
+    def usage(self, s=''):
+        print USAGE % (__version__.strip(), s) 
 
     def main(self):
                                                                                                                              
@@ -194,6 +192,17 @@ class Plone:
                 target = arg
                 parameters.feed('target', target)
 
+            if cmd in('--download',):
+                download = True
+                parameters.feed('download', download)
+
+        # check for errors
+        errors = []
+        if parameters.given('download') and parameters.given('build'):
+            errors.append('Either --download or --build mode is allowed')
+        if not parameters.given('download') and not parameters.given('build'):
+            errors.append('You need to give either --download or --build')
+
         # get distribution    
         load='platforms.%s' % target
         try: Distribution = __import__(load, globals(), locals(), 'Distribution')
@@ -205,7 +214,15 @@ class Plone:
             Distribution = Distribution.Distribution
             dist=Distribution()
         else:
-            raise getopt.GetoptError, "Platform %s is not supported." % target
+            errors.append('Platform %s is not supported' % target)
+
+        # got errors?
+        if len(errors):
+            errors = map(lambda x: 'GetoptError: %s.' % str(x), errors)
+            errors = '\n'.join(errors)
+            errors = '%s\n\n' % errors
+            self.usage(errors)
+            sys.exit(1)
 
                 
         parameters.feed('dist', dist)
