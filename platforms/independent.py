@@ -24,6 +24,7 @@ PLONE_CORE = [
     ZProduct('PlacelessTranslationService', 'http://osdn.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc7.tar.gz'),
     ZProduct('PloneErrorReporting', 'http://osdn.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
     ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.4.tar.gz'),
+    ZProduct('SecureMailHost', 'http://unc.dl.sourceforge.net/sourceforge/collective/SecureMailHost-0.2beta2.tar.gz'),
     ]
 
 ADDONS = [
