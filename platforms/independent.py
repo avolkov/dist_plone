@@ -23,6 +23,7 @@ PLONE_CORE = [
     ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.tar.gz'),
     ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc3.tar.gz'),
     ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
+    #ZProduct('PloneTranslations', 'http://thisissuppostedtolivesomewhereonsf/PloneTranslations-X.Y.tar.gz'),
     ]
 
 ADDONS = [
