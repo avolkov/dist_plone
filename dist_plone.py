@@ -1,6 +1,8 @@
-# Plone packaging script
+# Plone Distribution Script
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
+#
+# $Revision: 1.1 $, $Date: 2004/03/13 22:08:48 $
 """
 This script:
   
@@ -39,6 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
+__version__ = "$Revision: 1.9$"[11:-1]
 
 class Software:
     """ general software """
@@ -104,6 +107,23 @@ class Parameters:
         return p in self._eaten
 
 
+USAGE="""Plone Distribution script %s.
+Usage: python2.3 dist_plone.py [OPTION]...
+ 
+When given no argument the script downloads anything from package
+and platform independent definition to ./build.
+ 
+Parameters:
+  --help                   display this usage information and exit.
+  --target=TARGET          selects package definition to use.
+  --dest=DESTINATION       destination folder (default is ./build).
+  --core                   use minimal mode.
+  --build                  builds tarball instead of downloading only.
+
+Mail bug reports and suggestions to <simon@longsleep.org>.
+""" % __version__
+
+
 class Plone:
 
     version = None
@@ -129,7 +149,7 @@ class Plone:
         os.system(command)
 
     def usage(self):
-        print "Write me."
+        print USAGE 
 
     def main(self):
                                                                                                                              
