@@ -366,10 +366,10 @@ class Plone:
 
             # XXX: hack PloneTranslations i18n folder to be inside CMFPlone
             # XXX: remove this hack as soon as we stop putting i18n into CMFPlone
-            if visible_name == 'PloneTranslations':
-                s = os.path.join(destination, 'i18n')
-                d = os.path.join(destination, '..', 'CMFPlone', 'i18n')
-                copy_tree(s, d)
+            #if visible_name == 'PloneTranslations':
+            #    s = os.path.join(destination, 'i18n')
+            #    d = os.path.join(destination, '..', 'CMFPlone', 'i18n')
+            #    copy_tree(s, d)
 
             # check version.txt
             contents = os.listdir(destination)
@@ -395,8 +395,7 @@ class Plone:
                 print "--> Used as Plone Package Version."
 
         # write README.txt
-        fp = open(os.path.join(self.basefolder, 'README.txt')
-, 'w')
+        fp = open(os.path.join(self.basefolder, 'README.txt'), 'w')
         fp.write(self.parameters.dist.readme)
         fp.close()
 
@@ -416,9 +415,9 @@ class Plone:
 
         # XXX: hack
         # actually remove PloneTranslations
-        if "PloneTranslations" in os.listdir(self.basefolder):
-            f = os.path.join(self.basefolder, "PloneTranslations")
-            remove_tree(f)
+        #if "PloneTranslations" in os.listdir(self.basefolder):
+        #    f = os.path.join(self.basefolder, "PloneTranslations")
+        #    remove_tree(f)
         
         # create new package
         name = 'Plone'
