@@ -8,7 +8,7 @@ ARCHETYPES_BASE = BASE + 'archetypes/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://zope.org/Products/CMF/CMF-1.4.5/CMF-1.4.5.tar.gz',
+           'http://zope.org/Products/CMF/CMF-1.4.6/CMF-1.4.6.tar.gz',
            { 'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
              'CMFDefault' : ZProduct,
@@ -22,7 +22,7 @@ PLONE_CORE = [
            {'CMFActionIcons': ZProduct,}
     ),
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.3-beta.tar.gz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.3.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.4.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-2.0.1.tgz'),
@@ -30,8 +30,6 @@ PLONE_CORE = [
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.4.tar.gz'),
     ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
-    # XXX hotfix is required for 2.7.0 and 2.7.1
-    ZProduct('Hotfix_20040714', 'http://zope.org/Products/Zope/Hotfix_2004-07-14/Zope%202.7.0%20-%202.7.1/Hotfix_2004-07-14.tar.gz'),
     ]
 
 ADDONS = [
@@ -55,7 +53,7 @@ AT1_2 = [
     ]
 
 AT1_3 = [
-    Bundle('Archetypes',  ARCHETYPES_BASE + 'archetypes-1.3.0_b3.tgz',
+    Bundle('Archetypes',  ARCHETYPES_BASE + 'Archetypes-1.3.0-beta5.tar.gz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
@@ -77,8 +75,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.4/Python-2.3.4.tgz')
-    # XXX remove hotfix after moving to 2.7.2
-    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.1/Zope-2.7.1.tgz')
+    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.2/Zope-2.7.2.tgz')
 
     # plone core
     core   = PLONE_CORE
