@@ -27,7 +27,7 @@ PLONE_CORE = [
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-2.0.1.tgz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0-rc8.tar.gz'),
-    ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.1.tar.gz'),
+    ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.4.tar.gz'),
     ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc1.tar.gz'),
     # XXX hotfix is required for 2.7.0 and 2.7.1
@@ -36,7 +36,7 @@ PLONE_CORE = [
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.8/ExternalEditor-0.8-src.tgz'),
-    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.0.tar.gz'),
+    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.2.tar.gz'),
 ##    ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6799a2e8aec0edc19a6a1f2682ac8a4a/kupu-1.1.tgz')
     ]
 
