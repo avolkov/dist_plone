@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.8 $, $Date: 2004/03/18 11:06:39 $
+# $Revision: 1.9 $, $Date: 2004/03/18 11:10:08 $
 """
 This script:
   
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.8 $"[11:-1]
+__version__ = "$Revision: 1.9 $"[11:-1]
 
 class Software:
     """ general software """
@@ -177,7 +177,7 @@ class Plone:
 
             if cmd in ('--dest',): 
                 dest = arg
-                assert os.isdir(dest)
+                assert os.path.isdir(dest)
                 parameters.feed('dest', dest)
 
             if cmd in ('--core',):
