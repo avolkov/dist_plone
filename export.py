@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#$Id$
+#$Id: export.py,v 1.1 2004/05/18 14:59:26 zopezen Exp $
 #Copyright: ClearWind Consulting Ltd
 #License: http://www.clearwind.ca/license
 
@@ -19,16 +19,15 @@ if len(sys.argv) < 3:
 
 cvs = 'cvs -d:ext:%s@cvs.sf.net:/cvsroot/plone export -r %s CMFPlone'
 cvs = cvs % (sys.argv[1], sys.argv[2])
-print cvs
 os.system(cvs)
 
 assert os.path.exists('CMFPlone'), "Check out failed?"
 
 version = open('CMFPlone/version.txt').read().strip()
 
-tar = 'tar cf PloneCore-%s.tar CMFPlone' % version
+tar = 'tar cf CMFPlone-%s.tar CMFPlone' % version
 os.system(tar)
 
-gzip = 'gzip PloneCore-%s.tar' % version
+gzip = 'gzip CMFPlone-%s.tar' % version
 os.system(gzip)
 os.system('rm -rf CMFPlone')
