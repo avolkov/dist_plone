@@ -16,13 +16,13 @@ PLONE_CORE = [
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController.1_0_1.tar.gz'),
+    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.1.tar.gz'),
     ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0-final.tar.gz'),
     ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool_1.4.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.tar.gz'),
     ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc3.tar.gz'),
-    ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting.0_1.tar.gz'),
+    ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
     ]
 
 ADDONS = [
