@@ -3,7 +3,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://cmf.zope.org/download/CMF-1.4.2/CMF-1.4.2.tar.gz',
+           'http://cmf.zope.org/download/CMF-1.4.3/CMF-1.4.3.tar.gz',
            { 'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
              'CMFDefault' : ZProduct,
@@ -12,33 +12,33 @@ PLONE_CORE = [
            }
     ),
     ZProduct('BTreeFolder2', 'http://hathaway.freezope.org/Software/BTreeFolder2/BTreeFolder2-1.0.tar.gz'),
-    Bundle('CMFActionIcons', 
+    Bundle('CMFActionIcons',
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.1.tar.gz'),
-    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0-final.tar.gz'),
-    ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool_1.4.tgz'),
+    ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tar.gz'),
+    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0.1.tar.gz'),
+    ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool_1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
-    ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.tar.gz'),
-    ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc3.tar.gz'),
+    ZProduct('GroupUserFolder', 'http://heanet.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tar.gz'),
+    ZProduct('PlacelessTranslationService', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PlacelessTranslationService-1.0fork-rc6.tar.gz'),
     ZProduct('PloneErrorReporting', 'http://heanet.dl.sourceforge.net/sourceforge/collective/PloneErrorReporting-0.1.tar.gz'),
     ZProduct('PloneTranslations', 'http://osdn.dl.sourceforge.net/sourceforge/plone-i18n/PloneTranslations-0.1.tar.gz'),
     ]
 
 ADDONS = [
     Bundle('Archetypes',
-           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.2.5-rc4.tgz',
+           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.3.0-b2.tgz',
            { 'Archetypes': ZProduct,
-             'generator' : ZProduct, # omg .. why the hell these go into Products?
-             'validation': ZProduct, # omg .. why the hell these go into Products?
+             'generator' : ZProduct,
+             'validation': ZProduct,
            }
     ),
     Bundle('PortalTransforms',
-           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.3.tgz',
+           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.4.tgz',
            {'PortalTransforms': ZProduct,}
     ),
-    ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.7/ExternalEditor-0.7.tgz'),
+    ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.7.2/ExternalEditor-0.7.2-src.tgz'),
     ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.0.tar.gz'),
     ]
 

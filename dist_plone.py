@@ -2,32 +2,32 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.9 $, $Date: 2004/03/18 11:10:08 $
+# $Revision: 1.10 $, $Date: 2004/03/21 22:05:28 $
 """
 This script:
-  
- 1) Gets the PloneBase-X.Y tarball (contains only CMFPlone dir, nothing 
+
+ 1) Gets the PloneBase-X.Y tarball (contains only CMFPlone dir, nothing
     else) from SF.net (I would like to move it away from SF, though - since
     it's not meant for public consumption).
-  
+
  2) Adds the Plone Core specified products, and creates PloneCore-X.Y
-  
- 3) Adds the cross-platform additions that consitute Plone, and creates 
+
+ 3) Adds the cross-platform additions that consitute Plone, and creates
     Plone-X.Y
-  
- The installers are normally built on top of [3]. Plone Core[2] is for 
- people who just want the minimal Plone install with minimal dependencies, 
+
+ The installers are normally built on top of [3]. Plone Core[2] is for
+ people who just want the minimal Plone install with minimal dependencies,
  aka. People Who Know What They Want.
-  
+
  Which means any platform-specific installers:
-  
+
  a) Get Plone-X.Y.tgz [3]
- 
+
  b) Add their platform-specific additions (PIL, win32all, etc)
- 
+
  c) Create the installer
 
- Read http://plone.org/development/teams/release/ for definitions and 
+ Read http://plone.org/development/teams/release/ for definitions and
  further explanations.
 
  -- Alexander Limi
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.9 $"[11:-1]
+__version__ = "$Revision: 1.10 $"[11:-1]
 
 class Software:
     """ general software """
@@ -68,7 +68,7 @@ class Bundle(Software):
     destination = 'downloads'
 
     def __init__(self, name, download_url, mapping):
-        # define a subfolder -> class mapping here to 
+        # define a subfolder -> class mapping here to
         # specify the contents of this bundle
 
         Software.__init__(self, name, download_url)
@@ -140,17 +140,17 @@ class Plone:
             try: os.mkdir(dest)
             except: pass
             self.parameters.feed('dest', dest)
-        
+
     def run(self, command):
         command = " ".join(command)
         print "command is %s" % repr(command)
         os.system(command)
 
     def usage(self, s=''):
-        print USAGE % (__version__.strip(), s) 
+        print USAGE % (__version__.strip(), s)
 
     def main(self):
-                                                                                                                             
+
         try:
             opts, args = getopt.getopt(sys.argv[1:],
                                        self.short_options,
@@ -175,13 +175,13 @@ class Plone:
                 self.usage()
                 sys.exit()
 
-            if cmd in ('--dest',): 
+            if cmd in ('--dest',):
                 dest = arg
                 assert os.path.isdir(dest)
                 parameters.feed('dest', dest)
 
             if cmd in ('--core',):
-                core = True 
+                core = True
                 parameters.feed('core', core)
 
             if cmd in ('--build',):
@@ -203,10 +203,10 @@ class Plone:
         if not parameters.given('download') and not parameters.given('build'):
             errors.append('You need to give either --download or --build')
 
-        # get distribution    
+        # get distribution
         load='platforms.%s' % target
         try: Distribution = __import__(load, globals(), locals(), 'Distribution')
-        except: 
+        except:
             raise
             Distribution = None
         if Distribution:
@@ -223,10 +223,10 @@ class Plone:
             self.usage(errors)
             sys.exit(1)
 
-                
+
         parameters.feed('dist', dist)
         # remember parameters
-        self.parameters = parameters 
+        self.parameters = parameters
 
         self.setup()
         self.download()
@@ -237,7 +237,8 @@ class Plone:
     def download(self):
 
         download_destination = self.basefolder
-        if not self.parameters.given('build') and self.parameters.given('dest'): download_destination=self.parameters.dest
+        if not self.parameters.given('build') and self.parameters.given('dest'):
+            download_destination=self.parameters.dest
 
         contents = os.path.join(download_destination, 'CONTENTS.txt')
         contents = open(contents, "w")
@@ -253,13 +254,13 @@ class Plone:
             ob.filename=filename
             contents.write("%s - %s\n" % (ob.name, ob.download_url))
             data.append(ob)
-            
+
         # walk with our callback
         self.walk(dl_callback)
- 
+
         # close log file
         contents.close()
- 
+
         # store our data
         self.data = data
 
@@ -271,7 +272,7 @@ class Plone:
         if not self.parameters.given('core'): walk=walk+('addons', )
 
         for w in walk:
-            cur = getattr(dist, w, []) 
+            cur = getattr(dist, w, [])
             for c in cur:
                 callback(c)
 
@@ -280,7 +281,7 @@ class Plone:
 
         if not self.parameters.given('build'): return
 
-        got = self.data 
+        got = self.data
 
         items = []
         def expand(ob):
@@ -289,7 +290,7 @@ class Plone:
                     expand(item)
             else:
                 items.append(ob)
-                                                             
+
         # expand bundles
         map(lambda x: expand(x), got)
 
@@ -299,7 +300,7 @@ class Plone:
         # check if we only got products
         products = filter(lambda x: x[0] == 'ZProduct', items)
         products = len(products) == len(items)
-                                                             
+
         if products:
             # if we only have products reset their destination
             for ob in items:
@@ -315,15 +316,15 @@ class Plone:
             visible_name = ob.name
 
             search = None
-            if ob.parent: 
+            if ob.parent:
                 search = ob.name
                 ob=ob.parent
                 move=os.path.join(destination, search)
                 destination=os.path.join(self.basefolder, ob.destination)
 
             filename = ob.filename
-           
-            # make the path (including all anchestors) 
+
+            # make the path (including all anchestors)
             mkpath(destination, verbose=1)
 
             # extract the files
@@ -336,7 +337,7 @@ class Plone:
                     need=0
                     name = f.name
                     name = name.split('/')
-                    if len(name): 
+                    if len(name):
                         if name[0] == search:
                             need=1
                         elif len(name)>1 and name[1] == search:
@@ -354,7 +355,7 @@ class Plone:
             if move:
                 source = os.path.join(destination,base,search)
                 destination = move
-                copy_tree(source, destination) 
+                copy_tree(source, destination)
                 remove_tree(os.path.split(source)[0])
             else:
                 destination = os.path.join(destination, ob.name)
