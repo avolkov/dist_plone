@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.7 $, $Date: 2004/03/18 10:50:19 $
+# $Revision: 1.8 $, $Date: 2004/03/18 11:06:39 $
 """
 This script:
   
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.7 $"[11:-1]
+__version__ = "$Revision: 1.8 $"[11:-1]
 
 class Software:
     """ general software """
@@ -210,7 +210,6 @@ class Plone:
             raise
             Distribution = None
         if Distribution:
-            print "Distribution", repr(Distribution)
             Distribution = Distribution.Distribution
             dist=Distribution()
         else:
