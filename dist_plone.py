@@ -389,6 +389,8 @@ class Plone:
 
             # store version
             if visible_name in ('CMFPlone', ):
+                # XXX: hack Plone package version
+                version = version.split()[0]
                 self.version = version
                 print "--> Used as Plone Package Version."
 
