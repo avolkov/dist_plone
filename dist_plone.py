@@ -1,32 +1,35 @@
-# Plone packaging script, by Simon Eisenmann, 2004.
-# 
-# This script:
-#  
-# 1) Gets the PloneBase-X.Y tarball (contains only CMFPlone dir, nothing 
-#    else) from SF.net (I would like to move it away from SF, though - since
-#    it's not meant for public consumption).
-#  
-# 2) Adds the Plone Core specified products, and creates PloneCore-X.Y
-#  
-# 3) Adds the cross-platform additions that consitute Plone, and creates 
-#    Plone-X.Y
-#  
-# The installers are normally built on top of [3]. Plone Core[2] is for 
-# people who just want the minimal Plone install with minimal dependencies, 
-# aka. People Who Know What They Want.
-#  
-# Which means any platform-specific installers:
-#  
-# a) Get Plone-X.Y.tgz [3]
-# 
-# b) Add their platform-specific additions (PIL, win32all, etc)
-# 
-# c) Create the installer
-#
-# Read http://plone.org/development/teams/release/ for definitions and 
-# further explanations.
-#
-# -- Alexander Limi
+# Plone packaging script
+# by Simon Eisenmann, 2004.
+# for questions contact simon@longsleep.org
+"""
+This script:
+  
+ 1) Gets the PloneBase-X.Y tarball (contains only CMFPlone dir, nothing 
+    else) from SF.net (I would like to move it away from SF, though - since
+    it's not meant for public consumption).
+  
+ 2) Adds the Plone Core specified products, and creates PloneCore-X.Y
+  
+ 3) Adds the cross-platform additions that consitute Plone, and creates 
+    Plone-X.Y
+  
+ The installers are normally built on top of [3]. Plone Core[2] is for 
+ people who just want the minimal Plone install with minimal dependencies, 
+ aka. People Who Know What They Want.
+  
+ Which means any platform-specific installers:
+  
+ a) Get Plone-X.Y.tgz [3]
+ 
+ b) Add their platform-specific additions (PIL, win32all, etc)
+ 
+ c) Create the installer
+
+ Read http://plone.org/development/teams/release/ for definitions and 
+ further explanations.
+
+ -- Alexander Limi
+"""
 
 import tarfile
 import time
@@ -341,6 +344,12 @@ class Plone:
                 self.version = version
                 print "--> Used as Plone Package Version."
 
+        # write README.txt
+        fp = open(os.path.join(self.basefolder, 'README.txt')
+, 'w')
+        fp.write(self.parameters.dist.readme)
+        fp.close()
+
         # cleanup for packaging
         for ob in self.data:
             filename = ob.filename
@@ -349,13 +358,17 @@ class Plone:
         # create new package
         name = 'Plone'
         if self.parameters.given('core'): name="%sCore" % name
-        name = "%s-%s.tar.gz" % (name, self.version)
-        print "Creating Tarball %s." % name
-        filename = os.path.join(self.parameters.dest, name)
+        target = self.parameters.target.lower()
+        name = "%s-%s" % (name, self.version)
+        if target not in ('independent',):
+            name="%s-%s" % (name, target)
+        filename = "%s.tar.gz" % name
+        print "Creating Tarball %s." % filename
+        filename = os.path.join(self.parameters.dest, filename)
 
         # make tar
         tar = tarfile.open(filename, 'w:gz')
-        tar.add(self.basefolder, '/')
+        tar.add(self.basefolder, '/%s' % name)
         tar.close()
 
         print "Wrote Tarball to %s." % filename

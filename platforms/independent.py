@@ -41,7 +41,8 @@ ADDONS = [
     ZProduct('Epoz', 'http://zope.org/Members/mjablonski/Epoz/0.7.4/Epoz-0.7.4.tar.gz'),
     ]
 
-README_TXT = """Plone's README is in CMFPlone/README.txt"""
+README_TXT = """Plone's README is in CMFPlone/README.txt
+"""
 
 
 
