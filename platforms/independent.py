@@ -2,7 +2,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 
 BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
 #PLONE_BASE = BASE + 'plone/'
-PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly'
+PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly/'
 PLONE_I18N_BASE = BASE + 'plone-i18n/'
 COLLECTIVE_BASE = BASE + 'collective/'
 ARCHETYPES_BASE = BASE + 'archetypes/'
