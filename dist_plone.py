@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.11 $, $Date: 2004/05/04 22:14:16 $
+# $Revision: 1.12 $, $Date: 2004/05/05 01:50:32 $
 """
 This script:
 
@@ -33,7 +33,7 @@ This script:
  -- Alexander Limi
 """
 
-import tarfile
+import itarfile as tarfile # NOTE: pythons tarfile is borked, itarfile is a patched version
 import time
 import os, getopt, sys
 import tempfile, urllib
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.11 $"[11:-1]
+__version__ = "$Revision: 1.12 $"[11:-1]
 
 class Software:
     """ general software """
@@ -408,6 +408,7 @@ class Plone:
 
         # make tar
         tar = tarfile.open(filename, 'w:gz')
+        tar.posix = False
         tar.add(self.basefolder, '/%s' % name)
         tar.close()
 
