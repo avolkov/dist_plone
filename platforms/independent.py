@@ -27,7 +27,7 @@ PLONE_CORE = [
     ]
 
 ADDONS = [
-    Bundle('Archetypes', 'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.3.0_b2.tgz',
+    Bundle('Archetypes',  'http://heanet.dl.sourceforge.net/sourceforge/archetypes/archetypes-1.2.5-rc4.tgz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
