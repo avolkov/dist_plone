@@ -26,8 +26,8 @@ PLONE_CORE = [
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.5-rc2.tar.gz'),
-    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.4-RC1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.0.5.tar.gz'),
+    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.4.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.1.tgz'),
     ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
