@@ -29,7 +29,7 @@ PLONE_CORE = [
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0-rc8.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.4.tar.gz'),
-    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
+#    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
     ]
 
 ADDONS = [
