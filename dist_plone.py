@@ -103,6 +103,8 @@ class Parameters:
 
 class Plone:
 
+    version = None
+
     parameters = None
     data = []
 
@@ -331,17 +333,38 @@ class Plone:
                 fp.close()
                 print "--> Version %s." % str(version)
             else:
+                version = 'unkown'
                 print "--> NO VERSION."
+
+            # store version
+            if visible_name in ('CMFPlone', ):
+                self.version = version
+                print "--> Used as Plone Package Version."
 
         # cleanup for packaging
         for ob in self.data:
             filename = ob.filename
             os.unlink(filename)
 
+        # create new package
+        name = 'Plone'
+        if self.parameters.given('core'): name="%sCore" % name
+        name = "%s-%s.tar.gz" % (name, self.version)
+        print "Creating Tarball %s." % name
+        filename = os.path.join(self.parameters.dest, name)
+
+        # make tar
+        tar = tarfile.open(filename, 'w:gz')
+        tar.add(self.basefolder, '/')
+        tar.close()
+
+        print "Wrote Tarball to %s." % filename
+
+
 
     def cleanup(self):
         print "Cleaning up %s." % self.basefolder
-        #remove_tree(self.basefolder)
+        remove_tree(self.basefolder)
         pass
 
 # main class
