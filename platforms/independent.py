@@ -29,7 +29,7 @@ PLONE_CORE = [
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0-rc8.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.4.tar.gz'),
-    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc2.tar.gz'),
+    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
     # XXX hotfix is required for 2.7.0 and 2.7.1
     ZProduct('Hotfix_20040714', 'http://zope.org/Products/Zope/Hotfix_2004-07-14/Zope%202.7.0%20-%202.7.1/Hotfix_2004-07-14.tar.gz'),
     ]
@@ -41,17 +41,17 @@ ADDONS = [
     ]
 
 AT1_2 = [
-    Bundle('Archetypes',  ARCHETYPES_BASE + 'archetypes-1.2.5-rc4.tgz',
+    Bundle('Archetypes',  ARCHETYPES_BASE + 'Archetypes-1.2.5-rc5.tar.gz',
            { 'Archetypes': ZProduct,
              'generator' : ZProduct,
              'validation': ZProduct,
+             'PortalTransforms': ZProduct,
            }
-    ),
-    Bundle('PortalTransforms',
-           ARCHETYPES_BASE + 'PortalTransforms-1.0.4.tgz',
-           {'PortalTransforms': ZProduct,}
-
-    ),
+        ),
+    #Bundle('PortalTransforms',
+    #       ARCHETYPES_BASE + 'PortalTransforms-1.0.4.tgz',
+    #       {'PortalTransforms': ZProduct,}
+    #    ),
     ]
 
 AT1_3 = [
