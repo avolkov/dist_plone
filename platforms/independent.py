@@ -38,7 +38,7 @@ ADDONS = [
            {'PortalTransforms': ZProduct,}
     ),
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.7/ExternalEditor-0.7.tgz'),
-    ZProduct('Epoz', 'http://zope.org/Members/mjablonski/Epoz/0.7.4/Epoz-0.7.4.tar.gz'),
+    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.8.0.tar.gz'),
     ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
