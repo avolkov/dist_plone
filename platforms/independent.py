@@ -12,7 +12,10 @@ PLONE_CORE = [
            }
     ),
     ZProduct('BTreeFolder2', 'http://hathaway.freezope.org/Software/BTreeFolder2/BTreeFolder2-1.0.tar.gz'),
-    ZProduct('CMFActionIcons', 'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz'),
+    Bundle('CMFActionIcons', 
+           'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
+           {'CMFActionIcons': ZProduct,}
+    ),
     ZProduct('CMFFormController', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFFormController.1_0_1.tar.gz'),
     ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0-final.tar.gz'),
     ZProduct('CMFQuickInstallerTool', 'http://heanet.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool_1.4.tgz'),
@@ -30,7 +33,10 @@ ADDONS = [
              'validation': ZProduct, # omg .. why the hell these go into Products?
            }
     ),
-    ZProduct('PortalTransforms', 'http://heanet.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.3.tgz'),
+    Bundle('PortalTransforms',
+           'http://heanet.dl.sourceforge.net/sourceforge/archetypes/PortalTransforms-1.0.3.tgz',
+           {'PortalTransforms': ZProduct,}
+    ),
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.7/ExternalEditor-0.7.tgz'),
     ZProduct('Epoz', 'http://zope.org/Members/mjablonski/Epoz/0.7.4/Epoz-0.7.4.tar.gz'),
     ]
