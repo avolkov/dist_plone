@@ -2,7 +2,7 @@
 # by Simon Eisenmann, 2004.
 # for questions contact simon@longsleep.org
 #
-# $Revision: 1.13 $, $Date: 2004/05/06 09:57:16 $
+# $Revision: 1.14 $, $Date: 2004/05/11 09:35:14 $
 """
 This script:
 
@@ -41,7 +41,7 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
-__version__ = "$Revision: 1.13 $"[11:-1]
+__version__ = "$Revision: 1.14 $"[11:-1]
 
 class Software:
     """ general software """
@@ -362,6 +362,14 @@ class Plone:
                 remove_tree(os.path.split(source)[0])
             else:
                 destination = os.path.join(destination, ob.name)
+
+            # XXX: hack PloneTranslations i18n folder to be inside CMFPlone
+            # XXX: remove this hack as soon as we stop putting i18n into CMFPlone
+            if visible_name == 'PloneTranslations':
+                s = os.path.join(destination, 'i18n')
+                d = os.path.join(destination, '..', 'CMFPlone', 'i18n')
+                copy_tree(s, d)
+                remove_tree(s)
 
             # check version.txt
             contents = os.listdir(destination)
