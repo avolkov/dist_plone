@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#$Id: export.py,v 1.1 2004/05/18 14:59:26 zopezen Exp $
+#$Id$
 #Copyright: ClearWind Consulting Ltd
 #License: http://www.clearwind.ca/license
 
