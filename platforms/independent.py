@@ -3,7 +3,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://cmf.zope.org/download/CMF-1.4.3/CMF-1.4.3.tar.gz',
+           'http://cmf.zope.org/download/CMF-1.4.4/CMF-1.4.4.tar.gz',
            { 'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
              'CMFDefault' : ZProduct,
@@ -17,7 +17,7 @@ PLONE_CORE = [
            {'CMFActionIcons': ZProduct,}
     ),
     ZProduct('CMFFormController', 'http://osdn.dl.sourceforge.net/sourceforge/collective/CMFFormController-1.0.2.tgz'),
-    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/CMFPlone-2.0.2.tar.gz'),
+    ZProduct('CMFPlone', 'http://osdn.dl.sourceforge.net/sourceforge/plone/PloneBase-2.0.3.tar.gz'),
     ZProduct('CMFQuickInstallerTool', 'http://osdn.dl.sourceforge.net/sourceforge/collective/CMFQuickInstallerTool-1.5.0.tgz'),
     ZProduct('Formulator', 'http://zope.org/Members/infrae/Formulator/Formulator-1.6.2/Formulator-1.6.2.tgz'),
     ZProduct('GroupUserFolder', 'http://osdn.dl.sourceforge.net/sourceforge/collective/GroupUserFolder-2.0.1.tgz'),
