@@ -35,6 +35,7 @@ This script:
 """
 
 import itarfile as tarfile # NOTE: pythons tarfile is borked, itarfile is a patched version
+import zipfile
 import time
 import os, getopt, sys
 import tempfile, urllib
@@ -331,16 +332,24 @@ class Plone:
             mkpath(destination, verbose=1)
 
             # extract the files
-            print "Processing %s %s\n%s." % (ob.type, visible_name, filename)
-		
-            tar=tarfile.open(filename)
+            print "Processing %s %s\n%s" % (ob.type, visible_name, filename)
+
+            # determine type
+            if tarfile.is_tarfile(filename):
+                ar = tarfile.TarFileCompat(filename,'r',tarfile.TAR_GZIPPED)
+            elif zipfile.is_zipfile(filename):
+                ar = zipfile.ZipFile(filename)
+            else:
+                raise IOError, "file '%s' is of unusable archive type. Only ZIP and compressed TAR files can be handled." % filename
+                
+            # do extraction
             base=''
-            for f in tar.getmembers():
+            for f in ar.namelist():
+                if not os.path.split(f)[1]: continue   # zipfile returns dirs, tarfile compat does not. ignore dirs.
                 need=1
-                if search:
+                if search:                     # do we need to include this directory?
                     need=0
-                    name = f.name
-                    name = name.split('/')
+                    name = f.split('/')
                     if len(name):
                         if name[0] == search:
                             need=1
@@ -349,11 +358,19 @@ class Plone:
                 if need:
                     try: base=name[0]
                     except: pass
-                    tar.extract(f, destination)
+                    
+                    # make destination directories and do extraction
+                    ext_fname = os.path.join(destination,f)
+                    try: os.makedirs(os.path.split(ext_fname)[0])
+                    except OSError: pass
+                    data = ar.read(f)
+                    dest = open(ext_fname,'w')
+                    dest.write(data)
+                    dest.close()
                 else: continue
 
-            # close tar
-            tar.close()
+            # close archive file
+            ar.close()
 
             # move directory if needed
             if move:
