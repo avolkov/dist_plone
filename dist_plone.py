@@ -43,6 +43,8 @@ import tempfile, urllib
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
 
+from imp import find_module, load_module
+
 __version__ = "$Revision: 1.15 $"[11:-1]
 
 class Software:
@@ -116,6 +118,7 @@ Usage: python2.3 dist_plone.py [--download|--build] [OPTION]...
 %sParameters:
   --help                   display this usage information and exit.
   --target=TARGET          selects package definition to use.
+  --modules=DIRECTORY      directory where target module is to be found (defaults to dist_plone.platforms).
   --dest=DESTINATION       destination folder (default is ./build).
   --core                   use minimal mode.
   --build                  builds tarball mode.
@@ -134,7 +137,7 @@ class Plone:
 
     # getopt command line parameters
     short_options = ""
-    long_options = ["help", "target=", "dest=", "core", "build", "download"]
+    long_options = ["help", "target=", "modules=", "dest=", "core", "build", "download"]
 
     def setup(self):
         self.basefolder = tempfile.mkdtemp()
@@ -167,9 +170,11 @@ class Plone:
         # default parameter values
         dest = os.getcwd()
         target = 'independent'
+        modules = None
         parameters = Parameters()
         parameters.dest = dest
         parameters.target = target
+        parameters.modules = modules
 
         # go through each cmd line argument
         for cmd, arg in opts:
@@ -194,6 +199,10 @@ class Plone:
             if cmd in ('--target',):
                 target = arg
                 parameters.feed('target', target)
+            
+            if cmd in ('--modules',):
+                modules = arg
+                parameters.feed('modules', modules)
 
             if cmd in('--download',):
                 download = True
@@ -207,11 +216,22 @@ class Plone:
             errors.append('You need to give either --download or --build')
 
         # get distribution
-        load='platforms.%s' % target
-        try: Distribution = __import__(load, globals(), locals(), 'Distribution')
-        except:
-            raise
-            Distribution = None
+        if not modules:
+            load='platforms.%s' % target
+            try: Distribution = __import__(load, globals(), locals(), 'Distribution')
+            except:
+                raise
+                Distribution = None
+        else:
+            try:
+                fp, pathname, description = find_module(target, [modules])
+                try:
+                    Distribution = load_module(target, fp, pathname, description)
+                finally:
+                    if fp: fp.close()
+            except ImportError:
+                errors.append("Target module '%s' cannot be found in '%s'" % (target, modules))
+                Distribution = None
         if Distribution:
             Distribution = Distribution.Distribution
             dist=Distribution()
@@ -439,7 +459,7 @@ class Plone:
         # create new package
         name = 'Plone'
         if self.parameters.given('core'): name="%sCore" % name
-        target = self.parameters.target.lower()
+        target = self.parameters.dist.target.lower()
         name = "%s-%s" % (name, self.version)
         if target not in ('independent',):
             name="%s-%s" % (name, target)
