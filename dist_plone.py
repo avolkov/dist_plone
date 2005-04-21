@@ -457,10 +457,11 @@ class Plone:
         #    remove_tree(f)
         
         # create new package
-        name = 'Plone'
+        name = getattr(self.parameters.dist, 'name', 'Plone')
+        version = getattr(self.parameters.dist, 'version', self.version)
         if self.parameters.given('core'): name="%sCore" % name
         target = self.parameters.dist.target.lower()
-        name = "%s-%s" % (name, self.version)
+        name = "%s-%s" % (name, version)
         if target not in ('independent',):
             name="%s-%s" % (name, target)
         filename = "%s.tar.gz" % name
