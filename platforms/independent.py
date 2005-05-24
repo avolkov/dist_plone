@@ -2,7 +2,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 
 BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
-#BASE = 'http://belnet.dl.sourceforge.net/sourceforge/'
+#BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly/'
@@ -14,7 +14,7 @@ ARCHETYPES_BASE = BASE + 'archetypes/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://zope.org/Products/CMF/CMF-1.4.7/CMF-1.4.7.tar.gz',
+           'http://zope.org/Products/CMF/CMF-1.4.8/CMF-1.4.8.tar.gz',
            { 'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
              'CMFDefault' : ZProduct,
@@ -26,15 +26,18 @@ PLONE_CORE = [
            'http://zope.org/Members/tseaver/CMFActionIcons/CMFActionIcons-0.9/CMFActionIcons-0.9.tar.gz',
            {'CMFActionIcons': ZProduct,}
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-alpha1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-alpha2.tar.gz'),
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.4.tar.gz'),
-    ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.2.tgz'),
+    ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.3.tgz'),
     ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-3.2.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2-rc2.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-alpha.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1beta2.tar.gz'),
     ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-1.0-rc1.tar.gz'),
+    ZProduct('ExtendedPathIndex', 'http://plone.org/products/extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
+    ZProduct('ResourceRegistries', 'http://plone.org/products/resourceregistries/releases/0.8.1/ResourceRegistries-0.8.1.tar.gz'),
+    ZProduct('ATReferenceBrowserWidget', 'http://plone.org/products/atreferencebrowserwidget/releases/1.0/ATReferenceBrowserWidget1.0.tar.gz')
 ]
 
 ADDONS = [
@@ -69,11 +72,11 @@ AT1_2 = [
 #]
 
 AT1_3 = [
-    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.2-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta1-Bundle.tar.gz'),
 ]
 
 ATCT = [
-    ZProduct('ATContentTypes', COLLECTIVE_BASE + 'ATContentTypes-0.2.0-final.tar.gz'),
+    ZProduct('ATContentTypes', 'http://plone.org/products/atcontenttypes/releases/1.0/ATContentTypes-snapshot-20050524.tar.gz'),
 ]
 
 
@@ -87,7 +90,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.4/Zope-2.7.4.tgz')
+    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.7.6/Zope-2.7.6-final.tgz')
 
     # plone core
     core   = PLONE_CORE
