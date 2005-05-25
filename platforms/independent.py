@@ -76,7 +76,7 @@ AT1_3 = [
 ]
 
 ATCT = [
-    ZProduct('ATContentTypes', 'http://plone.org/products/atcontenttypes/releases/1.0/ATContentTypes-snapshot-20050524.tar.gz'),
+    ZProduct('ATContentTypes', 'http://plone.org/products/atcontenttypes/releases/1.0/ATContentTypes-snapshot-20050525.tar.gz'),
 ]
 
 
