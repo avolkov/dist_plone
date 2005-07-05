@@ -30,27 +30,28 @@ PLONE_CORE = [
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-alpha2.tar.gz'),
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5-beta.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.4.tgz'),
-    ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
+    #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
+    ZProduct('BTreeFolder2', 'http://members.plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-3.2.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2-rc4.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1beta2.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-beta3.tar.gz'),
     ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-1.0-rc1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/0.8.1/ResourceRegistries-0.8.1.tar.gz'),
-    ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.0/ATReferenceBrowserWidget1.0.tar.gz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/0.95/ResourceRegistries-0.95.tar.gz'),
+    ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.0.1/ATReferenceBrowserWidget-1.0.1.tar.gz'),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0/ATContentTypes-snapshot-20050705.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/0.1/CMFDynamicViewFTI-snapshot-20050705.tar.gz'),
 ]
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.8/ExternalEditor-0.8-src.tgz'),
-    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-0.9.0.tar.gz'),
-    ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
+    ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-2.0.0.tar.gz'),
+    #XXX ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
 ]
 
 #AT1_3 = [
-#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta1-Bundle.tar.gz',
+#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta2-Bundle.tar.gz',
 #           { 'Archetypes': ZProduct,
 #             'generator' : ZProduct,
 #             'validation': ZProduct,
@@ -61,7 +62,7 @@ ADDONS = [
 #] 
 
 AT1_3 = [
-    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta1-Bundle.tar.gz') ,
+    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta2-Bundle.tar.gz') ,
 ]
 
 
