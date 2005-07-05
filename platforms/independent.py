@@ -45,7 +45,7 @@ PLONE_CORE = [
 ]
 
 ADDONS = [
-    ZProduct('ExternalEditor', 'http://zope.org/Members/Caseman/ExternalEditor/0.8/ExternalEditor-0.8-src.tgz'),
+    ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
     ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-2.0.0.tar.gz'),
     #XXX ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
 ]
