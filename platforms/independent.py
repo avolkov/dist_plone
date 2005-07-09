@@ -16,7 +16,7 @@ PLONE_ORG = 'http://plone.org/products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.5.2beta/CMF-1.5.2beta.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.5.2beta2/CMF-1.5.2beta2.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -31,7 +31,7 @@ PLONE_CORE = [
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5-beta.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.4.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
-    ZProduct('BTreeFolder2', 'http://members.plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
+    ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-3.22.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2-rc4.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
