@@ -33,15 +33,15 @@ PLONE_CORE = [
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-3.3.tar.gz'),
-    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2-rc4.tar.gz'),
+    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.0.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-beta3.tar.gz'),
-    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-1.0-rc1.tar.gz'),
+    ZProduct('SecureMailHost', PLONE_ORG + 'smh/releases/1.0/SecureMailHost-1.0.0.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/0.95/ResourceRegistries-0.95.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0/ATContentTypes-snapshot-20050705.tar.gz'),
-    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/0.1/CMFDynamicViewFTI-snapshot-20050705.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0/ATContentTypes-1.0.0-rc2.tar.gz'),
+    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0/CMFDynamicViewFTI-1.0.0.tar.gz'),
 ]
 
 ADDONS = [
