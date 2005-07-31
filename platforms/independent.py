@@ -52,7 +52,7 @@ ADDONS = [
 ]
 
 #AT1_3 = [
-#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta2-Bundle.tar.gz',
+#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc2-Bundle.tar.gz',
 #           { 'Archetypes': ZProduct,
 #             'generator' : ZProduct,
 #             'validation': ZProduct,
@@ -63,7 +63,7 @@ ADDONS = [
 #] 
 
 AT1_3 = [
-    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-beta2-Bundle.tar.gz') ,
+    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc2-Bundle.tar.gz'),
 ]
 
 
