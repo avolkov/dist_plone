@@ -1,6 +1,7 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
+BASE = 'http://easynews.dl.sourceforge.net/sourceforge/'
+#BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
 
