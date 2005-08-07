@@ -34,10 +34,10 @@ PLONE_CORE = [
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'GroupUserFolder/releases/3.4RC/GroupUserFolder-3.4RC.tar.gz'),
-    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.0.tar.gz'),
+    ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.1.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-rc2.tar.gz'),
-    ZProduct('SecureMailHost', PLONE_ORG + 'smh/releases/1.0/SecureMailHost-1.0.0.tar.gz'),
+    ZProduct('SecureMailHost', PLONE_ORG + 'smh/releases/1.0.1/SecureMailHost-1.0.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0/ResourceRegistries-1_0.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
@@ -53,7 +53,7 @@ ADDONS = [
 ]
 
 #AT1_3 = [
-#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc2-Bundle.tar.gz',
+#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc3-Bundle.tar.gz',
 #           { 'Archetypes': ZProduct,
 #             'generator' : ZProduct,
 #             'validation': ZProduct,
@@ -64,7 +64,7 @@ ADDONS = [
 #] 
 
 AT1_3 = [
-    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc2-Bundle.tar.gz'),
+    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-rc3-Bundle.tar.gz'),
 ]
 
 
