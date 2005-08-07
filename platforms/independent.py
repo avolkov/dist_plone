@@ -17,7 +17,7 @@ PLONE_ORG = 'http://plone.org/products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.5.2/CMF-1.5.2.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.5.3/CMF-1.5.3.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -33,7 +33,7 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.5.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
-    ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-3.3.tar.gz'),
+    ZProduct('GroupUserFolder', PLONE_ORG + 'GroupUserFolder/releases/3.4RC/GroupUserFolder-3.4RC.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.0.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-rc1.tar.gz'),
@@ -49,7 +49,7 @@ ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
     #ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-2.0.0.tar.gz'),
     #XXX ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
-    ZProduct('kupu', 'http://bubblenet.be/static/kupu-plone-2.1.tgz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3-rc2/kupu-1.3-rc2.tgz')
 ]
 
 #AT1_3 = [
