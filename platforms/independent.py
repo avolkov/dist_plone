@@ -1,7 +1,6 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://optusnet.dl.sourceforge.net/sourceforge/'
-#BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
+BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://voxel.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
 
@@ -28,7 +27,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-rc1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-rc2.tar.gz'),
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5-beta.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.5.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
@@ -39,10 +38,10 @@ PLONE_CORE = [
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-rc2.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'smh/releases/1.0.1/SecureMailHost-1.0.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0/ResourceRegistries-1_0.tgz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0.2/ResourceRegistries-1.0.2.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0/ATContentTypes-1.0.0-rc3.tar.gz'),
-    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0/CMFDynamicViewFTI-1.0.0.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0/ATContentTypes-1.0.0-rc4.tar.gz'),
+    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.1/CMFDynamicViewFTI-1.0.1.tar.gz'),
 ]
 
 ADDONS = [
