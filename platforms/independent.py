@@ -28,7 +28,7 @@ PLONE_CORE = [
            }
     ),
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-rc3.tar.gz'),
-    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5-beta.tar.gz'),
+    ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.5.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
