@@ -35,7 +35,7 @@ PLONE_CORE = [
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.4/GroupUserFolder-3.4.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.1.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-rc3.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/0.6/PloneLanguageTool-0.6.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'smh/releases/1.0.1/SecureMailHost-1.0.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.1/ExtendedPathIndex-2.1.tar.gz'),
