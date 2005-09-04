@@ -16,7 +16,7 @@ PLONE_ORG = 'http://plone.org/products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.5.3/CMF-1.5.3.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.5.4/CMF-1.5.4.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
