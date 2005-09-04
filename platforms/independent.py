@@ -32,7 +32,7 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.5.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
-    ZProduct('GroupUserFolder', PLONE_ORG + 'GroupUserFolder/releases/3.4RC/GroupUserFolder-3.4RC.tar.gz'),
+    ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.4/GroupUserFolder-3.4.tar.gz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.2.1.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1-rc3.tar.gz'),
