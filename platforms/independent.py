@@ -27,7 +27,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1-rc3.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1.tar.gz'),
     ZProduct('CMFFormController', COLLECTIVE_BASE + 'CMFFormController-1.0.5.tar.gz'),
     ZProduct('CMFQuickInstallerTool', COLLECTIVE_BASE + 'CMFQuickInstallerTool-1.5.5.tgz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
@@ -49,7 +49,7 @@ ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
     #ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-2.0.0.tar.gz'),
     #XXX ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3rc3/kupu-1.3-rc3.tgz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3/kupu-1.3.tgz')
 ]
 
 #AT1_3 = [
