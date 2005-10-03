@@ -53,15 +53,19 @@ class Software:
 
     name = None
     download_url = None
+    archive_rename = None
+    productdir_rename = None
     filename = None
     parent = None
 
     destination = 'downloads'
 
-    def __init__(self, name, download_url):
+    def __init__(self, name, download_url, productdir=None, archive_rename=None):
         self.name = name
         self.download_url = download_url
-
+        self.productdir_rename = productdir
+        self.archive_rename = archive_rename
+        
 
 class Bundle(Software):
     """ a archive which contains multiple other parts """
@@ -271,7 +275,11 @@ class Plone:
         def dl_callback(ob):
             print "Retrieving %s.\n" % ob.name,
             print "--> %s" % ob.download_url
-            filename = os.path.split(ob.download_url)[1]
+            if ob.archive_rename:
+                filename = ob.archive_rename
+            else:
+                filename = os.path.split(ob.download_url)[1]
+            print "to:", filename
             filename = os.path.join(download_destination, filename)
             urllib.urlretrieve(ob.download_url, filename)
             ob.filename=filename
@@ -363,9 +371,10 @@ class Plone:
                 raise IOError, "file '%s' is of unusable archive type. Only ZIP and compressed TAR files can be handled." % filename
                 
             # do extraction
+            productdir_rename = ob.productdir_rename
             base=''
             for f in ar.namelist():
-                if not os.path.split(f)[1]: continue   # zipfile returns dirs, tarfile compat does not. ignore dirs.
+                if not os.path.split(f)[1]: continue   # zipfile returns dirs, tarfile compat does not. ignore dir entries.
                 need=1
                 if search:                     # do we need to include this directory?
                     need=0
@@ -379,8 +388,15 @@ class Plone:
                     try: base=name[0]
                     except: pass
                     
+                    # do Product directory rename if needed
+                    if productdir_rename and f.find(productdir_rename) == 0:
+                        new_f = f[len(productdir_rename)+1:]
+                        new_f = os.path.join(ob.name, new_f)
+                        ext_fname = os.path.join(destination,new_f)
+                    else:
+                        ext_fname = os.path.join(destination,f)
+                        
                     # make destination directories and do extraction
-                    ext_fname = os.path.join(destination,f)
                     try: os.makedirs(os.path.split(ext_fname)[0])
                     except OSError: pass
                     data = ar.read(f)
