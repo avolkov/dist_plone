@@ -127,6 +127,7 @@ Usage: python2.3 dist_plone.py [--download|--build] [OPTION]...
   --core                   use minimal mode.
   --build                  builds tarball mode.
   --download               download only mode.
+  --downloaddir            download to this directory, or use file that already exists there.
 
 Mail bug reports and suggestions to <simon@longsleep.org>.
 """
@@ -141,7 +142,7 @@ class Plone:
 
     # getopt command line parameters
     short_options = ""
-    long_options = ["help", "target=", "modules=", "dest=", "core", "build", "download"]
+    long_options = ["help", "target=", "modules=", "dest=", "core", "build", "download", "downloaddir="]
 
     def setup(self):
         self.basefolder = tempfile.mkdtemp()
@@ -212,6 +213,10 @@ class Plone:
                 download = True
                 parameters.feed('download', download)
 
+            if cmd in('--downloaddir',):
+                downloaddir = arg
+                parameters.feed('downloaddir', downloaddir)
+
         # check for errors
         errors = []
         if parameters.given('download') and parameters.given('build'):
@@ -266,6 +271,10 @@ class Plone:
         download_destination = self.basefolder
         if not self.parameters.given('build') and self.parameters.given('dest'):
             download_destination=self.parameters.dest
+        if self.parameters.given('downloaddir'):
+            download_destination=self.parameters.downloaddir
+        if not os.path.exists(download_destination):
+            os.makedirs(download_destination)
 
         contents = os.path.join(download_destination, 'CONTENTS.txt')
         contents = open(contents, "w")
@@ -279,9 +288,13 @@ class Plone:
                 filename = ob.archive_rename
             else:
                 filename = os.path.split(ob.download_url)[1]
-            print "to:", filename
+            print "to:", filename, 
             filename = os.path.join(download_destination, filename)
-            urllib.urlretrieve(ob.download_url, filename)
+            if not os.path.isfile(filename):
+                urllib.urlretrieve(ob.download_url, filename)
+                print
+            else:
+                print "(exists)"
             ob.filename=filename
             contents.write("%s - %s\n" % (ob.name, ob.download_url))
             data.append(ob)
@@ -453,9 +466,10 @@ class Plone:
         fp.close()
 
         # cleanup for packaging
-        for ob in self.data:
-            filename = ob.filename
-            os.unlink(filename)
+        if not self.parameters.given('downloaddir'):
+            for ob in self.data:
+                filename = ob.filename
+                os.unlink(filename)
 
         # check for empty folders in base
         for f in os.listdir(self.basefolder):
@@ -490,7 +504,7 @@ class Plone:
         tar.add(self.basefolder, '/%s' % name)
         tar.close()
 
-        print "Wrote Tarball to %s." % filename
+        print "Wrote Tarball to %s" % filename
 
 
 
