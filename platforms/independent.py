@@ -13,6 +13,7 @@ COLLECTIVE_BASE = BASE + 'collective/'
 ARCHETYPES_BASE = BASE + 'archetypes/'
 
 PLONE_ORG = 'http://plone.org/products/'
+OSCOM_ORG = 'http://kupu.oscom.org/'
 
 PLONE_CORE = [
     Bundle('CMF',
@@ -49,7 +50,7 @@ ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
     #ZProduct('Epoz', 'http://mjablonski.zope.de/Epoz/releases/Epoz-2.0.0.tar.gz'),
     #XXX ZProduct('kupu', 'http://kupu.oscom.org/midcom-serveattachmentguid-6b4584286e6cd5bbf2f82f0a83ead0e2/kupu-1.2.1.tar.gz')
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3/kupu-1.3.tgz')
+    ZProduct('kupu', OSCOM_ORG + 'midcom-serveattachmentguid-f40122579e491f7a7417987bef0c49ee/kupu-1.3.1.tar.gz')
 ]
 
 #AT1_3 = [
