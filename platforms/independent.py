@@ -10,7 +10,6 @@ PLONE_BASE = BASE + 'plone/'
 
 PLONE_I18N_BASE = BASE + 'plone-i18n/'
 COLLECTIVE_BASE = BASE + 'collective/'
-ARCHETYPES_BASE = BASE + 'archetypes/'
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
@@ -53,21 +52,9 @@ ADDONS = [
     ZProduct('kupu', OSCOM_ORG + 'midcom-serveattachmentguid-f40122579e491f7a7417987bef0c49ee/kupu-1.3.1.tar.gz')
 ]
 
-#AT1_3 = [
-#    Bundle('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-final-Bundle.tar.gz',
-#           { 'Archetypes': ZProduct,
-#             'generator' : ZProduct,
-#             'validation': ZProduct,
-#             'PortalTransforms': ZProduct,
-#             'MimetypesRegistry': ZProduct,
-#           }
-#    ),
-#] 
-
 AT1_3 = [
-    ZProduct('Archetypes', ARCHETYPES_BASE + 'Archetypes-1.3.4-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.3.5/Archetypes-1.3.5-final-Bundle.tar.gz'),
 ]
-
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
 """
