@@ -16,7 +16,7 @@ OSCOM_ORG = 'http://kupu.oscom.org/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.5.4/CMF-1.5.4.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.5.5/CMF-1.5.5.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -59,14 +59,13 @@ AT1_3 = [
 README_TXT = """Plone's README is in CMFPlone/README.txt
 """
 
-
 class Distribution:
 
     target = 'independent'
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.1/Zope-2.8.1-final.tar.gz')
+    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.4/Zope-2.8.4-final.tgz')
 
     # plone core
     core   = PLONE_CORE
@@ -76,5 +75,4 @@ class Distribution:
 
     # the readme.txt
     readme = README_TXT
-
 
