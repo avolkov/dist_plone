@@ -33,7 +33,7 @@ PLONE_CORE = [
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.4/GroupUserFolder-3.4.tar.gz'),
-    ZProduct('PlacelessTranslationService', PLONE_ORG + 'pts/releases/1.2.4/PlacelessTranslationService-1.2.4.tar.gz'),
+    ZProduct('PlacelessTranslationService', PLONE_ORG + 'pts/releases/1.2.5/PlacelessTranslationService-1.2.5.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-2.1.1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/0.8/PloneLanguageTool-0.8.tar.gz'),
