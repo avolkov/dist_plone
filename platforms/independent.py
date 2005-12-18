@@ -26,7 +26,7 @@ PLONE_CORE = [
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/1.0.7/CMFFormController-1.0.7.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.6/CMFQuickInstallerTool-1.5.6.tar.gz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
-    ZProduct('BTreeFolder2', 'http://plone.org/Members/tiran/BTreeFolder2-1.0.2.tar.gz'),
+    ZProduct('BTreeFolder2', 'http://cvs.zope.org/Products/BTreeFolder2/BTreeFolder2.tar.gz?tarball=1&only_with_tag=BTreeFolder2-1_0_2'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.4/GroupUserFolder-3.4.tar.gz'),
     ZProduct('PlacelessTranslationService', PLONE_ORG + 'pts/releases/1.2.5/PlacelessTranslationService-1.2.5.tar.gz'),
     ZProduct('PloneErrorReporting', PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
