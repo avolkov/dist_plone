@@ -37,7 +37,7 @@ PLONE_CORE = [
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0.5/ResourceRegistries-1.0.5.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.1/ATContentTypes-1.0.1-final.tar.gz'),
-    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.1/CMFDynamicViewFTI-1.0.1.tar.gz'),
+    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.2/CMFDynamicViewFTI-1.0.2.tar.gz'),
 ]
 
 ADDONS = [
