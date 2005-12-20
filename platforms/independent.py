@@ -5,6 +5,7 @@ BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 #BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
+#PLONE_BASE = 'http://localhost/plone21/'
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
@@ -27,13 +28,13 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.6/CMFQuickInstallerTool-1.5.6.tar.gz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
     ZProduct('BTreeFolder2', 'http://cvs.zope.org/Products/BTreeFolder2/BTreeFolder2.tar.gz?tarball=1&only_with_tag=BTreeFolder2-1_0_2'),
-    ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.4/GroupUserFolder-3.4.tar.gz'),
+    ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.5/groupuserfolder-3-5-tar.gz'),
     ZProduct('PlacelessTranslationService', PLONE_ORG + 'pts/releases/1.2.5/PlacelessTranslationService-1.2.5.tar.gz'),
     ZProduct('PloneErrorReporting', PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTranslations', PLONE_ORG + 'plonetranslations/releases/2.1.1/PloneTranslations-2.1.1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/0.9/PloneLanguageTool-0.9.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.2/SecureMailHost-1.0.2.tar.gz'),
-    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.2/ExtendedPathIndex-2.2.tar.gz'),
+    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0.5/ResourceRegistries-1.0.5.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.1/ATContentTypes-1.0.1-final.tar.gz'),
