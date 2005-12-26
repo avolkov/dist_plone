@@ -35,7 +35,7 @@ PLONE_CORE = [
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/0.9/PloneLanguageTool-0.9.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.2/SecureMailHost-1.0.2.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.0.5/ResourceRegistries-1.0.5.tar.gz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.1/resourceregistries-1-1-tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.1/ATReferenceBrowserWidget.tar.gz'),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.1/ATContentTypes-1.0.1-final.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.2/CMFDynamicViewFTI-1.0.2.tar.gz'),
