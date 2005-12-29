@@ -8,7 +8,8 @@ PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://dev.clearwind.ca/Files/Plone/Nightly/'
 #PLONE_BASE = 'http://localhost/plone/'
 
-PLONE_I18N_BASE = BASE + 'plone-i18n/'
+PLONE_ORG = 'http://plone.org/products/'
+OSCOM_ORG = 'http://kupu.oscom.org/'
 COLLECTIVE_BASE = BASE + 'collective/'
 ARCHETYPES_BASE = BASE + 'archetypes/'
 
@@ -34,8 +35,7 @@ PLONE_CORE = [
     ZProduct('GroupUserFolder', COLLECTIVE_BASE + 'GroupUserFolder-2.0.1.tgz'),
     ZProduct('PlacelessTranslationService', COLLECTIVE_BASE + 'PlacelessTranslationService-1.0.tar.gz'),
     ZProduct('PloneErrorReporting', COLLECTIVE_BASE + 'PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_I18N_BASE + 'PloneTranslations-0.6.tar.gz'),
-#    ZProduct('SecureMailHost', COLLECTIVE_BASE + 'SecureMailHost-0.2rc3.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_ORG + 'plonetranslations/releases/0.8/PloneTranslations-0.8.tar.gz'),
 ]
 
 ADDONS = [
