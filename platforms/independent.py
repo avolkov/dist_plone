@@ -23,7 +23,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1.1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1.2-rc2.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/1.0.7/CMFFormController-1.0.7.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.7/CMFQuickInstallerTool-1.5.7.tar.gz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
@@ -60,7 +60,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.4/Zope-2.8.4-final.tgz')
+    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.5/Zope-2.8.5-final.tgz')
 
     # plone core
     core   = PLONE_CORE
