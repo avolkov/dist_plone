@@ -9,7 +9,7 @@ PLONE_BASE = BASE + 'plone/'
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
-ZOPE = 'http://www.zope.org/Members/'
+ZOPE_ORG = 'http://www.zope.org/Products/'
 
 PLONE_CORE = [
     Bundle('CMF',
@@ -44,9 +44,9 @@ PLONE_CORE = [
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-alpha1-tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/1.1/statusmessages-1.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/1.2/plonepas-1-2-tar.gz'),
-    ZProduct('PluggableAuthService', ZOPE + 'urbanape/PluggableAuthService/PluggableAuthService-1.2-beta/PluggableAuthService-1.2-beta.tar.gz'),
+    ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.2-beta/PluggableAuthService-1.2-beta.tar.gz'),
     ZProduct('PasswordResetTool', BASE + 'collective/PasswordResetTool-0.3.0.tar.gz'),
-    ZProduct('PluginRegistry', ZOPE + 'urbanape/PluginRegistry/PluginRegistry-1.1/PluginRegistry-1.1.tar.gz', 'PluginRegistry-1.1'),
+    ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1/PluginRegistry-1.1.tar.gz'),
 ]
 
 ADDONS = [
@@ -67,7 +67,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.8.6/Zope-2.8.6-final.tgz')
+    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.8.6/Zope-2.8.6-final.tgz')
 
     # plone core
     core   = PLONE_CORE
