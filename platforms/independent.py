@@ -27,7 +27,7 @@ PLONE_CORE = [
     ),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1-alpha2.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.2/atreferencebrowserqidget-1_2.tgz'),
-    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.3/CMFDynamicViewFTI-1.0.3.tar.gz'),
+    ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.4/CMFDynamicViewFTI-1.0.4.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0/CMFFormController-2.0.tar.gz'),
     # Poor release name
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/0.5alpha1/cmfplacefulworkflow-0-5alpha1.tgz'),
@@ -35,11 +35,11 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.7/CMFQuickInstallerTool-1.5.7.tar.gz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.5/groupuserfolder-3-5-tar.gz'),
-    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.2.6/PlacelessTranslationService-1.2.6.tar.gz'),
+    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.2.7/PlacelessTranslationService-1.2.7.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
-    ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.1.2/PloneTranslations-2.1.2.tar.gz'),
-    ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/0.9/PloneLanguageTool-0.9.tar.gz'),
-    ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.2/SecureMailHost-1.0.2.tar.gz'),
+    ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.5-beta1/PloneTranslations-2.5-beta1.tar.gz'),
+    ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.0/PloneLanguageTool-1.0.tar.gz'),
+    ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.3/SecureMailHost-1.0.3.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-alpha1-tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/1.1/statusmessages-1.1.tar.gz'),
@@ -67,7 +67,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.8.5/Zope-2.8.5-final.tgz')
+    zope   =  Software('zope'  , 'http://zope.org/Products/Zope/2.8.6/Zope-2.8.6-final.tgz')
 
     # plone core
     core   = PLONE_CORE
