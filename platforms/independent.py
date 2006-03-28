@@ -28,9 +28,9 @@ PLONE_CORE = [
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1-alpha2.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.2/atreferencebrowserqidget-1_2.tgz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.4/CMFDynamicViewFTI-1.0.4.tar.gz'),
-    ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0/CMFFormController-2.0.tar.gz'),
+    ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.1/CMFFormController-2.0.1.tar.gz'),
     # Poor release name
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/0.5alpha1/cmfplacefulworkflow-0-5alpha1.tgz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/0.5alpha2/cmfplacefulworkflow-0-5alpha2.tgz'),
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5-alpha2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.7/CMFQuickInstallerTool-1.5.7.tar.gz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.1.tgz'),
@@ -55,7 +55,7 @@ ADDONS = [
 ]
 
 AT1_4 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4-alpha2/archetypes-1-4-0-alpha02-bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4-alpha3/archetypes-1.4.0-alpha03-bundle.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
