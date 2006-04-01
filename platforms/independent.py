@@ -25,23 +25,25 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1-alpha2.tar.gz'),
-    ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.2/atreferencebrowserqidget-1_2.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1-beta1.tar.gz'),
+    ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.2/atreferencebrowserwidget-1_2.tgz'),
+    ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0-beta/cachefu-1-0beta-tar.gz', 'CacheFu-1.0beta'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.4/CMFDynamicViewFTI-1.0.4.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.1/CMFFormController-2.0.1.tar.gz'),
     # Poor release name
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/0.5alpha2/cmfplacefulworkflow-0-5alpha2.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5-alpha2.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5-beta1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.7/CMFQuickInstallerTool-1.5.7.tar.gz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.1.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.5/groupuserfolder-3-5-tar.gz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.2.7/PlacelessTranslationService-1.2.7.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
+    ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.8.0/PloneTestCase-0.8.0.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.5-beta1/PloneTranslations-2.5-beta1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.0/PloneLanguageTool-1.0.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.3/SecureMailHost-1.0.3.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-alpha1-tar.gz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-beta1-tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/1.1/statusmessages-1.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/1.2/plonepas-1-2-tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.2-beta/PluggableAuthService-1.2-beta.tar.gz'),
@@ -51,7 +53,7 @@ PLONE_CORE = [
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
-    ZProduct('kupu', OSCOM_ORG + 'midcom-serveattachmentguid-e73585dd09549cfe130f91177d889819/kupu-1.3.5.tar.gz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.5-plone25beta/kupu-1.3.5-plone25beta-tar.gz')
 ]
 
 AT1_4 = [
