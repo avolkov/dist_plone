@@ -48,7 +48,7 @@ ADDONS = [
 ]
 
 AT1_3 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.3.8-final/archetypes-1.3.8-final-bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.3.9-final/archetypes-1-3-9-final-bundle.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
