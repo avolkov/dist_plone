@@ -37,7 +37,7 @@ PLONE_CORE = [
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + '/resourceregistries/releases/1.2.2/resourceregistries-1-2-2-tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.3/ATReferenceBrowserWidget-1.3.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.3/ATContentTypes-1.0.3.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.4/ATContentTypes-1.0.4.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.4/CMFDynamicViewFTI-1.0.4.tar.gz'),
 ]
 
