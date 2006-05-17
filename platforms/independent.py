@@ -31,8 +31,8 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.0.0/CMFDynamicViewFTI-2.0.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.2/CMFFormController-2.0.2.tar.gz'),
     # Poor release name
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/0.5alpha2/cmfplacefulworkflow-0-5alpha2.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5-beta1.tar.gz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0beta3/cmfplacefulworkflow-1-0beta3.tgz'),
+    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5-beta2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.8/CMFQuickInstallerTool-1.5.8.tar.gz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.51/groupuserfolder-3-51.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.0/PlacelessTranslationService-1.3.0.tar.gz'),
