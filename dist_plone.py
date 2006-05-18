@@ -39,6 +39,7 @@ import zipfile
 import time
 import os, getopt, sys
 import tempfile, urllib
+import urlparse
 
 from distutils.dir_util import mkpath, copy_tree, remove_tree
 from distutils.file_util import move_file
@@ -46,6 +47,9 @@ from distutils.file_util import move_file
 from imp import find_module, load_module
 
 __version__ = "$Revision: 1.15 $"[11:-1]
+
+sourceforge_mirrors = ("umn osdn switch jaist heanet ovh "
+                       "belnet kent easynews puzzle").split()
 
 class Software:
     """ general software """
@@ -65,7 +69,7 @@ class Software:
         self.download_url = download_url
         self.productdir_rename = productdir
         self.archive_rename = archive_rename
-        
+
 
 class Bundle(Software):
     """ a archive which contains multiple other parts """
@@ -204,7 +208,7 @@ class Plone:
             if cmd in ('--target',):
                 target = arg
                 parameters.feed('target', target)
-            
+
             if cmd in ('--modules',):
                 modules = arg
                 parameters.feed('modules', modules)
@@ -282,21 +286,23 @@ class Plone:
 
         data = []
         def dl_callback(ob):
-            print "Retrieving %s.\n" % ob.name,
-            print "--> %s" % ob.download_url
             if ob.archive_rename:
                 filename = ob.archive_rename
             else:
                 filename = os.path.split(ob.download_url)[1]
-            print "to:", filename, 
             filename = os.path.join(download_destination, filename)
+            source = ob.download_url
             if not os.path.isfile(filename):
-                urllib.urlretrieve(ob.download_url, filename)
+                print "Retrieving %s.\n" % ob.name,
+                print "--> %s" % source
+                print "to:", filename
+                source = retrieve_file(source, filename)
                 print
             else:
-                print "(exists)"
-            ob.filename=filename
-            contents.write("%s - %s\n" % (ob.name, ob.download_url))
+                print "Not retrieving %s." % ob.name,
+                print filename, "already exists."
+            ob.filename = filename
+            contents.write("%s - %s\n" % (ob.name, source))
             data.append(ob)
 
         # walk with our callback
@@ -313,7 +319,7 @@ class Plone:
 
         dist = self.parameters.dist
         walk = ('core',)
-        if not self.parameters.given('core'): 
+        if not self.parameters.given('core'):
 	    walk=walk+('addons', )
 
         for w in walk:
@@ -382,7 +388,7 @@ class Plone:
                 ar = zipfile.ZipFile(filename)
             else:
                 raise IOError, "file '%s' is of unusable archive type. Only ZIP and compressed TAR files can be handled." % filename
-                
+
             # do extraction
             productdir_rename = ob.productdir_rename
             base=''
@@ -400,7 +406,7 @@ class Plone:
                 if need:
                     try: base=name[0]
                     except: pass
-                    
+
                     # do Product directory rename if needed
                     if productdir_rename and f.find(productdir_rename) == 0:
                         new_f = f[len(productdir_rename)+1:]
@@ -408,7 +414,7 @@ class Plone:
                         ext_fname = os.path.join(destination,new_f)
                     else:
                         ext_fname = os.path.join(destination,f)
-                        
+
                     # make destination directories and do extraction
                     try: os.makedirs(os.path.split(ext_fname)[0])
                     except OSError: pass
@@ -478,14 +484,14 @@ class Plone:
             else:
                 if not len(os.listdir(f)):
                     # remove empty folders
-                    remove_tree(f)  
+                    remove_tree(f)
 
         # XXX: hack
         # actually remove PloneTranslations
         #if "PloneTranslations" in os.listdir(self.basefolder):
         #    f = os.path.join(self.basefolder, "PloneTranslations")
         #    remove_tree(f)
-        
+
         # create new package
         name = getattr(self.parameters.dist, 'name', 'Plone')
         version = getattr(self.parameters.dist, 'version', self.version)
@@ -512,6 +518,60 @@ class Plone:
         print "Cleaning up %s." % self.basefolder
         remove_tree(self.basefolder)
         pass
+
+class TheHook:
+
+    def __init__(self):
+        self.seen = 0
+        self.finished = False
+
+    def __call__(self, blocknum, bs, size):
+        self.seen += bs
+        if blocknum == 0 or self.finished:
+            # Ignore first call, it calls our hook before reading anything.
+            return
+        if self.seen > size:
+            # Unfortnately, 'bs' is the block size, not the 'read
+            # bytes', so this can easily exceed the size reported in
+            # 'slow reads'.
+            sys.stdout.write(' ' * (70 - (blocknum % 70)))
+            sys.stdout.write(' [%3d%%]\n' % 100)
+            sys.stdout.flush()
+            self.finished = True
+            return
+        sys.stdout.write('.')
+        sys.stdout.flush()
+        if not blocknum % 70 or self.seen == size:
+            if self.seen == size:
+                sys.stdout.write(' ' * (70 - (blocknum % 70)))
+                self.finished = True
+            done = (float(self.seen) / size) * 100
+            sys.stdout.write(' [%3d%%]\n' % done)
+            sys.stdout.flush()
+
+def retrieve_file(source, filename):
+    mirrors = None
+    while True:
+        try:
+            urllib.urlretrieve(source, filename, reporthook=TheHook())
+        except IOError, msg:
+            print "Failed to retrieve '%s'" % source
+            if not source.find('sourceforge') > 0:
+                raise
+            if mirrors is None:
+                mirrors = iter(sourceforge_mirrors)
+            scheme, netloc, path, query, fragment = urlparse.urlsplit(source)
+            parts = netloc.split('.')
+            try:
+                netloc = '.'.join([mirrors.next()] + parts[1:])
+            except StopIteration:
+                raise IOError, msg
+            source = urlparse.urlunsplit((scheme, netloc, path,
+                                          query, fragment))
+            print "Retrying with '%s'" % source
+        else:
+            break
+    return source
 
 # main class
 if __name__ == '__main__':
