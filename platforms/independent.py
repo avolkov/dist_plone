@@ -21,7 +21,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.1.3-rc1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.1.3/PloneBase-2.1.3-rc1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/1.0.7/CMFFormController-1.0.7.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.8/CMFQuickInstallerTool-1.5.8.tar.gz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
