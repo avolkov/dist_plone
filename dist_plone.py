@@ -534,7 +534,7 @@ class TheHook:
             # Unfortnately, 'bs' is the block size, not the 'read
             # bytes', so this can easily exceed the size reported in
             # 'slow reads'.
-            sys.stdout.write(' ' * (70 - (blocknum % 70)))
+            sys.stdout.write(' ' * (71 - (blocknum % 70)))
             sys.stdout.write(' [%3d%%]\n' % 100)
             sys.stdout.flush()
             self.finished = True
@@ -543,7 +543,7 @@ class TheHook:
         sys.stdout.flush()
         if not blocknum % 70 or self.seen == size:
             if self.seen == size:
-                sys.stdout.write(' ' * (70 - (blocknum % 70)))
+                sys.stdout.write(' ' * (71 - (blocknum % 70)))
                 self.finished = True
             done = (float(self.seen) / size) * 100
             sys.stdout.write(' [%3d%%]\n' % done)
