@@ -1,6 +1,6 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
+BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://localhost/plone21/'
