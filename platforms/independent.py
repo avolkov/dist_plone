@@ -23,15 +23,17 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1-beta2.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1.0.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.4/ATReferenceBrowserWidget-1.4.tar.gz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0-beta-2/cachefu-1-0-beta-2.tgz', 'CacheFu-1.0-beta2'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.0.0/CMFDynamicViewFTI-2.0.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.2/CMFFormController-2.0.2.tar.gz'),
     # Poor release name
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0beta3/cmfplacefulworkflow-1-0beta3.tgz'),
-    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5-beta2.tar.gz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0rc2/cmfplacefulworkflow-1-0rc2.tgz'),
+    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5-RC1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
+    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
+    ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.5.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.52/groupuserfolder-3-52.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.1/PlacelessTranslationService-1.3.1.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
@@ -39,7 +41,6 @@ PLONE_CORE = [
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.5-beta2/PloneTranslations-2.5-beta2.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.2/PloneLanguageTool-1.2.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.4/SecureMailHost-1.0.4.tar.gz'),
-    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-rc1-tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0/statusmessages-2.0.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.0/plonepas-2-0-beta2-tar.gz'),
@@ -65,8 +66,8 @@ class Distribution:
     target = 'independent'
 
     # this is what plone is based on
-    python =  Software('python', 'http://python.org/ftp/python/2.4.3/Python-2.4.3.tgz')
-    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.9.3/Zope-2.9.3-final.tgz')
+    python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
+    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.8.7/Zope-2.8.7-final.tgz')
 
     # plone core
     core   = PLONE_CORE
