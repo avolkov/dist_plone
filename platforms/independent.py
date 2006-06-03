@@ -11,7 +11,7 @@ ZOPE_ORG = 'http://www.zope.org/Products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.6.0/CMF-1.6.0.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.6.1-beta/CMF-1.6.1-beta.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -38,7 +38,7 @@ PLONE_CORE = [
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.1/PlacelessTranslationService-1.3.1.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/0.11/PloneErrorReporting-0.11.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.8.2/PloneTestCase-0.8.2.tar.gz'),
-    ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.5-beta2/PloneTranslations-2.5-beta2.tar.gz'),
+    ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.5-rc1/PloneTranslations-2.5-rc1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.2/PloneLanguageTool-1.2.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.4/SecureMailHost-1.0.4.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3/resourceregistries-1-3-rc1-tar.gz'),
