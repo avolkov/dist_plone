@@ -21,7 +21,7 @@ PLONE_CORE = [
              'DCWorkflow' : ZProduct,
            }
     ),
-    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.1.3/PloneBase-2.1.3-rc1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.1.3/PloneBase-2.1.3.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/1.0.7/CMFFormController-1.0.7.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     #XXX ZProduct('BTreeFolder2', 'http://hathawaymix.org/Software/BTreeFolder2/BTreeFolder2-1.0.1.tar.gz'),
@@ -35,13 +35,13 @@ PLONE_CORE = [
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + '/resourceregistries/releases/1.2.2/resourceregistries-1-2-2-tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.4/ATReferenceBrowserWidget-1.4.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.4/ATContentTypes-1.0.4.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.0.5/ATContentTypes-1.0.5.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/1.0.4/CMFDynamicViewFTI-1.0.4.tar.gz'),
 ]
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.6-plone/kupu-1-3-6-plone-tar.gz'),
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.7-plone/kupu-1-3-7-plone.tgz'),
     #ZProduct('kupu', OSCOM_ORG + 'midcom-serveattachmentguid-f40122579e491f7a7417987bef0c49ee/kupu-1.3.1.tar.gz')
 ]
 
@@ -58,7 +58,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.3.5/Python-2.3.5.tgz')
-    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.6/Zope-2.8.6-final.tgz')
+    zope   =  Software('zope'  , 'http://www.zope.org/Products/Zope/2.8.7/Zope-2.8.7-final.tgz')
 
     # plone core
     core   = PLONE_CORE
