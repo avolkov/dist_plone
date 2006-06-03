@@ -1,6 +1,6 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://switch.dl.sourceforge.net/sourceforge/'
+BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://localhost/plone25/'
@@ -51,11 +51,11 @@ PLONE_CORE = [
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.6-plone/kupu-1-3-6-plone-tar.gz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.6-plone/kupu-1-3-7-plone.tgz')
 ]
 
 AT1_4 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4-beta1/archetypes-1.4.0-beta1-bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4-RC1/archetypes-1-4-0-rc1-bundle.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
