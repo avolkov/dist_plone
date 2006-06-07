@@ -150,6 +150,10 @@ class Plone:
 
     def setup(self):
         self.basefolder = tempfile.mkdtemp()
+        # cheat to get a temp dir with proper mode (755)
+        os.rmdir(self.basefolder)
+        os.mkdir(self.basefolder)
+
         if not self.parameters.given('dest'):
             dest = os.path.join(self.parameters.dest, 'build')
             try: os.mkdir(dest)
