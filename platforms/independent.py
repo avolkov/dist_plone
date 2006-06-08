@@ -25,7 +25,7 @@ PLONE_CORE = [
     ),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1.0.tar.gz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.4/ATReferenceBrowserWidget-1.4.tar.gz'),
-    ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0-rc-1/cachefu-1-0-rc-1.tgz', 'CacheFu-1.0-rc-1'),
+    ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0-rc-2/CacheFu-1.0-rc-2.tgz', 'CacheFu-1.0-rc-2'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.0.0/CMFDynamicViewFTI-2.0.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.2/CMFFormController-2.0.2.tar.gz'),
     # Poor release name
