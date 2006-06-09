@@ -23,14 +23,14 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1.0.tar.gz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1/ATContentTypes-1.1.1.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.4/ATReferenceBrowserWidget-1.4.tar.gz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0-rc-2/CacheFu-1.0-rc-2.tgz', 'CacheFu-1.0-rc-2'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.0.0/CMFDynamicViewFTI-2.0.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.3/CMFFormController-2.0.3.tar.gz'),
     # Poor release name
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0rc2/cmfplacefulworkflow-1-0rc2.tgz'),
-    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5-RC1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5-rc2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.5.tgz'),
