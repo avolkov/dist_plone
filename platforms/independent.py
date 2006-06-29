@@ -1,6 +1,6 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
+BASE = 'http://superb-west.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://localhost/plone25/'
@@ -30,7 +30,7 @@ PLONE_CORE = [
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.4/CMFFormController-2.0.4.tar.gz'),
     # Poor release name
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.0-final/CMFPlacefulWorkflow-1.0.0-final.tgz'),
-    ZProduct('CMFPlone', PLONE_ORG + 'plone/releases/2.5/PloneBase-2.5.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.3/ExtendedPathIndex-2.3.tar.gz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.2.5.tgz'),
