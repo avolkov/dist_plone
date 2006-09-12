@@ -1,6 +1,6 @@
 from dist_plone import Software, PyModule, ZProduct, Bundle
 
-BASE = 'http://superb-west.dl.sourceforge.net/sourceforge/'
+BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 #PLONE_BASE = 'http://localhost/plone25/'
@@ -29,9 +29,9 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.5/CMFFormController-2.0.5.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.1/CMFPlacefulWorkflow-1.0.1.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
-    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tar.gz'),
+    ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.3.7.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.53/GroupUserFolder-3.53.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.2/PlacelessTranslationService-1.3.2.tar.gz'),
@@ -43,9 +43,9 @@ PLONE_CORE = [
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3.2/ResourceRegistries-1.3.2.tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0.1/statusmessages-2.0.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.1/PlonePAS-2.1.tar.gz'),
-    ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4/PluggableAuthService-1.4.tar.gz'),
+    ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4/PluggableAuthService-1.4.tar.gz', 'PluggableAuthService-1.4'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.0/passwordresettool-0-4-tar.gz'),
-    ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz'),
+    ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz', 'PluginRegistry-1.1.1'),
 ]
 
 ADDONS = [
