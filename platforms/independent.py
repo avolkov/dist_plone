@@ -41,7 +41,7 @@ PLONE_CORE = [
 ]
 
 ADDONS = [
-    ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.1-src.tgz'),
+    ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.2-src.tgz'),
     ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.8/kupu-1.3.8.tgz'),
     #ZProduct('kupu', OSCOM_ORG + 'midcom-serveattachmentguid-f40122579e491f7a7417987bef0c49ee/kupu-1.3.1.tar.gz')
 ]
