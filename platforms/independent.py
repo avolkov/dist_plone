@@ -30,7 +30,6 @@ PLONE_CORE = [
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
-    ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.3.7.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54/GroupUserFolder-3.54.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.3/PlacelessTranslationService-1.3.3.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
@@ -39,7 +38,7 @@ PLONE_CORE = [
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.4/PloneLanguageTool-1.4.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.4/SecureMailHost-1.0.4.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3.2/ResourceRegistries-1.3.2.tar.gz'),
-    ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0.1/statusmessages-2.0.1.tar.gz'),
+    ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.1/statusmessages-2.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.1/PlonePAS-2.1.tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4/PluggableAuthService-1.4.tar.gz', 'PluggableAuthService-1.4'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.0/passwordresettool-0-4-tar.gz'),
@@ -52,7 +51,7 @@ ADDONS = [
 ]
 
 AT1_5 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.1/Archetypes-1.4.1-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.0-a1-all.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
