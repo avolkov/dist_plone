@@ -22,18 +22,19 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.3/ATContentTypes-1.1.3.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2/ATContentTypes-1.2-alpha1.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.5/ATReferenceBrowserWidget-1.5.tar.gz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.1/CacheFu-1.0.1.tgz', 'CacheFu-1.0.1'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.5/CMFFormController-2.0.5.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.0/CMFQuickInstallerTool-2.0.0.tar.gz'),
+    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3/CMFDiffTool-0.3.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54/GroupUserFolder-3.54.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.0/PlacelessTranslationService-1.4.0.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
-    ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.8.4/PloneTestCase-0.8.4.tar.gz'),
+    ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.8.6/PloneTestCase-0.8.6.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.6.0/PloneTranslations-2.6.0.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.4/PloneLanguageTool-1.4.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.4/SecureMailHost-1.0.4.tar.gz'),
@@ -47,7 +48,7 @@ PLONE_CORE = [
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.2-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3.8/kupu-1.3.8.tgz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3/kupu-1.4b2.tgz')
 ]
 
 AT1_5 = [
