@@ -48,7 +48,7 @@ PLONE_CORE = [
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.2-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.3/kupu-1.4b2.tgz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1.4b2.tgz')
 ]
 
 AT1_5 = [
