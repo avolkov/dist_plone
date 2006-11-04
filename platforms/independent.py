@@ -32,7 +32,7 @@ PLONE_CORE = [
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1-final.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
-    ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.3.7.tgz'),
+    ZProduct('Five', 'http://codespeak.net/z3/five/release/Five-1.3.8.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54/GroupUserFolder-3.54.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.3/PlacelessTranslationService-1.3.3.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
