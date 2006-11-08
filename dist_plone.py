@@ -37,7 +37,7 @@ This script:
 import itarfile as tarfile # NOTE: pythons tarfile is borked, itarfile is a patched version
 import zipfile
 import time
-import os, getopt, sys
+import os, getopt, sys, subprocess
 import tempfile, urllib
 import urlparse
 
@@ -97,7 +97,19 @@ class PyModule(Software):
 
     type = 'PyModule'
     destination = 'lib/python'
-    pass
+
+    def post_extract(self, destination, me):
+        cwd=os.getcwd()
+        os.chdir(os.path.join(destination, me))
+        res=subprocess.call(["python", "setup.py", "install_lib",
+            "--install-dir=%s" % destination])
+        if res!=0:
+            raise RuntimeError, "Failed to setup package"
+
+        os.chdir(destination)
+        subprocess.call(["rm", "-rf", me])
+        os.chdir(cwd)
+        
 
 
 class ZProduct(Software):
@@ -105,7 +117,6 @@ class ZProduct(Software):
 
     type = 'ZProduct'
     destination = 'lib/python/Products'
-    pass
 
 
 class Parameters:
@@ -121,7 +132,7 @@ class Parameters:
 
 
 USAGE="""Plone Distribution script %s.
-Usage: python2.3 dist_plone.py [--download|--build] [OPTION]...
+Usage: python dist_plone.py [--download|--build] [OPTION]...
 
 %sParameters:
   --help                   display this usage information and exit.
@@ -263,7 +274,6 @@ class Plone:
             self.usage(errors)
             sys.exit(1)
 
-
         parameters.feed('dist', dist)
         # remember parameters
         self.parameters = parameters
@@ -310,7 +320,11 @@ class Plone:
             data.append(ob)
 
         # walk with our callback
-        self.walk(dl_callback)
+	for product in self.walk_products():
+            dl_callback(product)
+
+	for package in self.walk_packages():
+            dl_callback(package)
 
         # close log file
         contents.close()
@@ -319,22 +333,31 @@ class Plone:
         self.data = data
 
 
-    def walk(self, callback):
-
+    def walk_products(self):
         dist = self.parameters.dist
         walk = ('core',)
         if not self.parameters.given('core'):
-	    walk=walk+('addons', )
+            walk=walk+('addons', )
 
         for w in walk:
-            cur = getattr(dist, w, [])
-            for c in cur:
-                callback(c)
+            for c in getattr(dist, w, []):
+                yield c
+
+
+    def walk_packages(self):
+        dist = self.parameters.dist
+        walk = ('core_packages',)
+        if not self.parameters.given('core'):
+            walk=walk+('addons_packages', )
+
+        for w in walk:
+            for c in getattr(dist, w, []):
+                yield c
 
 
     def build(self):
-
-        if not self.parameters.given('build'): return
+        if not self.parameters.given('build'):
+            return
 
         got = self.data
 
@@ -347,25 +370,20 @@ class Plone:
                 items.append(ob)
 
         # expand bundles
-        map(lambda x: expand(x), got)
+        for item in got:
+            expand(item)
 
         # check if we have products only
-        items = map(lambda x: (x.type, x), items)
+        products = [x for x in items if x.type=='ZProduct']
 
         # check if we only got products
-        products = filter(lambda x: x[0] == 'ZProduct', items)
-        products = len(products) == len(items)
-
-        if products:
+        if len(products) == len(items):
             # if we only have products reset their destination
             for ob in items:
-                ob[1].destination=''
-        else: pass
-        items = map(lambda x: x[1], items)
+                ob.destination=''
 
         # move stuff to their destinations
         for ob in items:
-
             destination = os.path.join(self.basefolder, ob.destination)
             move = None
             visible_name = ob.name
@@ -397,9 +415,11 @@ class Plone:
             productdir_rename = ob.productdir_rename
             base=''
             for f in ar.namelist():
-                if not os.path.split(f)[1]: continue   # zipfile returns dirs, tarfile compat does not. ignore dir entries.
+                # zipfile returns dirs, tarfile compat does not. ignore dirs
+                if not os.path.split(f)[1]:
+                    continue
                 need=1
-                if search:                     # do we need to include this directory?
+                if search:           # do we need to include this directory?
                     need=0
                     name = f.split('/')
                     if len(name):
@@ -426,10 +446,15 @@ class Plone:
                     dest = open(ext_fname,'w')
                     dest.write(data)
                     dest.close()
-                else: continue
+                else:
+                    continue
 
             # close archive file
             ar.close()
+
+            if hasattr(ob, 'post_extract'):
+                maindir=os.path.split(f)[0]
+                ob.post_extract(destination, maindir)
 
             # move directory if needed
             if move:
@@ -448,10 +473,12 @@ class Plone:
             #    copy_tree(s, d)
 
             # check version.txt
-            contents = os.listdir(destination)
-            check = map(lambda x: x.lower(), contents)
-            try: index=check.index('version.txt')
-            except: index = []
+            try:
+                contents = os.listdir(destination)
+                check = map(lambda x: x.lower(), contents)
+                index=check.index('version.txt')
+            except:
+                index = []
             if index != []:
                 # found a version
                 version = contents[index]
@@ -460,7 +487,7 @@ class Plone:
                 fp.close()
                 print "--> Version %s." % str(version)
             else:
-                version = 'unkown'
+                version = 'unkownn'
                 print "--> NO VERSION."
 
             # store version
@@ -475,11 +502,16 @@ class Plone:
         fp.write(self.parameters.dist.readme)
         fp.close()
 
+        
         # cleanup for packaging
         if not self.parameters.given('downloaddir'):
             for ob in self.data:
                 filename = ob.filename
                 os.unlink(filename)
+
+        # Remove generate .pyc files
+        subprocess.call(["find", self.basefolder, "-name", "*.pyc",
+            "-exec", "rm", "{}", ";"])
 
         # check for empty folders in base
         for f in os.listdir(self.basefolder):
