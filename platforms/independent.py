@@ -27,7 +27,8 @@ PLONE_CORE = [
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.1/CacheFu-1.0.1.tgz', 'CacheFu-1.0.1'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.6/CMFFormController-2.0.6.tar.gz'),
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.0/CMFQuickInstallerTool-2.0.0.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3/CMFDiffTool-0.3.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
@@ -45,6 +46,12 @@ PLONE_CORE = [
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.1/PasswordResetTool-0.4.1.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz', 'PluginRegistry-1.1.1'),
 ]
+
+PLONE_CORE_PACKAGES = [
+    PyModule('plone.portlets', 'http://antiloop.plone.org/download/plone.portlets-0.1dev-r11127.tar.gz'),
+    PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11257.tar.gz'),
+]
+
 
 ADDONS = [
     ZProduct('ExternalEditor', 'http://plope.com/software/ExternalEditor/ExternalEditor-0.9.2-src.tgz'),
@@ -68,6 +75,8 @@ class Distribution:
 
     # plone core
     core   = PLONE_CORE
+    # plone core packages
+    core_packages = PLONE_CORE_PACKAGES
 
     # plone addons
     addons = ADDONS + AT1_5
