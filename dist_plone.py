@@ -465,17 +465,10 @@ class Plone:
             else:
                 destination = os.path.join(destination, ob.name)
 
-            # XXX: hack PloneTranslations i18n folder to be inside CMFPlone
-            # XXX: remove this hack as soon as we stop putting i18n into CMFPlone
-            #if visible_name == 'PloneTranslations':
-            #    s = os.path.join(destination, 'i18n')
-            #    d = os.path.join(destination, '..', 'CMFPlone', 'i18n')
-            #    copy_tree(s, d)
-
             # check version.txt
             try:
                 contents = os.listdir(destination)
-                check = map(lambda x: x.lower(), contents)
+                check = [x.lower() for x in contents]
                 index=check.index('version.txt')
             except:
                 index = []
@@ -495,13 +488,13 @@ class Plone:
                 # XXX: hack Plone package version
                 version = version.split()[0]
                 self.version = version
+                self.plonepackage = destination
                 print "--> Used as Plone Package Version."
 
-        # write README.txt
-        fp = open(os.path.join(self.basefolder, 'README.txt'), 'w')
-        fp.write(self.parameters.dist.readme)
-        fp.close()
-
+        # Copy the CMFPlone README.txt to the toplegel
+        docs = getattr(self.parameters.dist, 'documentation', ['README.txt'])
+        for doc in docs:
+            subprocess.call(["cp", os.path.join(self.plonepackage, doc), self.basefolder])
         
         # cleanup for packaging
         if not self.parameters.given('downloaddir'):
