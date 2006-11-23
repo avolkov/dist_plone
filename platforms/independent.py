@@ -45,6 +45,7 @@ PLONE_CORE = [
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4/PluggableAuthService-1.4.tar.gz', 'PluggableAuthService-1.4'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.1/PasswordResetTool-0.4.1.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz', 'PluginRegistry-1.1.1'),
+    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-alpha1.tgz'),
 ]
 
 PLONE_CORE_PACKAGES = [
