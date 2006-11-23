@@ -11,7 +11,7 @@ ZOPE_ORG = 'http://www.zope.org/Products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-2.1.0-alpha/CMF-2.1.0-alpha.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-2.1.0-alpha2/CMF-2.1.0-alpha2.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
