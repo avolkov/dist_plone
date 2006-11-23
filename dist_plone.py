@@ -116,7 +116,7 @@ class ZProduct(Software):
     """ zope product """
 
     type = 'ZProduct'
-    destination = 'lib/python/Products'
+    destination = 'Products'
 
 
 class Parameters:
