@@ -3,7 +3,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
-#PLONE_BASE = 'http://localhost/plone30/'
+PLONE_BASE = 'http://home.wiggy.net/~wichert/'
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
@@ -28,7 +28,7 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.6/CMFFormController-2.0.6.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-3.0-alpha1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.0/CMFQuickInstallerTool-2.0.0.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3/CMFDiffTool-0.3.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
@@ -85,4 +85,7 @@ class Distribution:
 
     # the readme.txt
     readme = README_TXT
+
+    # documentation to copy to the tar root
+    documentation = [ 'README.txt', 'INSTALL.txt' ]
 
