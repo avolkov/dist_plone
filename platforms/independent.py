@@ -50,7 +50,7 @@ PLONE_CORE = [
 
 PLONE_CORE_PACKAGES = [
     PyModule('plone.portlets', 'http://antiloop.plone.org/download/plone.portlets-0.1dev-r11127.tar.gz'),
-    PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11257.tar.gz'),
+    PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11387.tar.gz'),
 ]
 
 
