@@ -27,13 +27,13 @@ PLONE_CORE = [
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.7/ATReferenceBrowserWidget-1.7.1.tgz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.2/CacheFu-1.0.2.tgz', 'CacheFu-1.0.2'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
-    ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.6/CMFFormController-2.0.6.tar.gz'),
+    ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.7/CMFFormController-2.0.7.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.5.9/CMFQuickInstallerTool-1.5.9.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.1/GroupUserFolder-3.54.1.tgz'),
-    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.4/PlacelessTranslationService-1.3.4.tar.gz'),
+    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.5/PlacelessTranslationService-1.3.5.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.0/PloneTestCase-0.9.0.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/2.6.1/PloneTranslations-2.6.1.tar.gz'),
@@ -64,8 +64,8 @@ class Distribution:
     target = 'independent'
 
     # this is what plone is based on
-    python =  Software('python', 'http://python.org/ftp/python/2.4.3/Python-2.4.3.tgz')
-    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.9.4/Zope-2.9.4-final.tgz')
+    python =  Software('python', 'http://python.org/ftp/python/2.4.4/Python-2.4.4.tgz')
+    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.9.6/Zope-2.9.6-final.tgz')
 
     # plone core
     core   = PLONE_CORE
