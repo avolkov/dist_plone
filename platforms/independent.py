@@ -60,6 +60,8 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.openid', PLONE_GOOGLE + 'plone.app.openid-0.9.tar.gz'),
     PyModule('plone.app.controlpanel', CHEESE_SOURCE + 'p/plone.app.controlpanel/plone.app.controlpanel-1.0a2.tar.gz'),
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0a2.tar.gz'),
+    PyModule('plone.app.controlpanel', 'http://cheeseshop.python.org/packages/source/p/plone.app.controlpanel/plone.app.controlpanel-1.0a2.tar.gz'),
+    PyModule('plone.app.vocabularies', 'http://cheeseshop.python.org/packages/source/p/plone.app.vocabularies/plone.app.vocabularies-1.0a2.tar.gz'),
 ]
 
 
@@ -69,7 +71,7 @@ ADDONS = [
 ]
 
 AT1_5 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.0-a1-all.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.0-a2.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
