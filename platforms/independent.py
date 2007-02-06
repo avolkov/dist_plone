@@ -52,6 +52,9 @@ PLONE_CORE_PACKAGES = [
     PyModule('wicked', 'http://cheeseshop.python.org/packages/source/w/wicked/wicked-1.1.0.tar.gz'),
     PyModule('plone.portlets', 'http://antiloop.plone.org/download/plone.portlets-0.1dev-r11127.tar.gz'),
     PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11387.tar.gz'),
+    PyModule('plone.session', 'http://plone.googlecode.com/files/plone.session-0.9.tar.gz'),
+    PyModule('plone.openid', 'http://plone.googlecode.com/files/plone.openid-0.9.tar.gz'),
+    PyModule('plone.app.openid', 'http://plone.googlecode.com/files/plone.app.openid-0.9.tar.gz'),
 ]
 
 
