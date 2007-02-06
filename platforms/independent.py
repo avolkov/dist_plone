@@ -72,8 +72,8 @@ class Distribution:
     target = 'independent'
 
     # this is what plone is based on
-    python =  Software('python', 'http://python.org/ftp/python/2.4.3/Python-2.4.3.tgz')
-    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.10.0/Zope-2.10.0-final.tgz')
+    python =  Software('python', 'http://www.python.org/ftp/python/2.4.4/Python-2.4.4.tgz')
+    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.10.2/Zope-2.10.2.tgz')
 
     # plone core
     core   = PLONE_CORE
