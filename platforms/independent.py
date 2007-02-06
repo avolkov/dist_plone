@@ -4,10 +4,13 @@ BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
 PLONE_BASE = 'http://antiloop.plone.org/download/'
+PLONE_GOOGLE = "http://plone.googlecode.com/files/"
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
 ZOPE_ORG = 'http://www.zope.org/Products/'
+
+CHEESE_SOURCE = 'http://cheeseshop.python.org/packages/source/'
 
 PLONE_CORE = [
     Bundle('CMF',
@@ -49,12 +52,14 @@ PLONE_CORE = [
 ]
 
 PLONE_CORE_PACKAGES = [
-    PyModule('wicked', 'http://cheeseshop.python.org/packages/source/w/wicked/wicked-1.1.0.tar.gz'),
-    PyModule('plone.portlets', 'http://antiloop.plone.org/download/plone.portlets-0.1dev-r11127.tar.gz'),
-    PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11387.tar.gz'),
-    PyModule('plone.session', 'http://plone.googlecode.com/files/plone.session-0.9.tar.gz'),
-    PyModule('plone.openid', 'http://plone.googlecode.com/files/plone.openid-0.9.tar.gz'),
-    PyModule('plone.app.openid', 'http://plone.googlecode.com/files/plone.app.openid-0.9.tar.gz'),
+    PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.0.tar.gz'),
+    PyModule('plone.portlets', PLONE_BASE + 'plone.portlets-0.1dev-r11127.tar.gz'),
+    PyModule('plone.app.portlets', PLONE_BASE + 'plone.app.portlets-0.1dev-r11387.tar.gz'),
+    PyModule('plone.session', PLONE_GOOGLE + 'plone.session-0.9.tar.gz'),
+    PyModule('plone.openid', PLONE_GOOGLE + 'plone.openid-0.9.tar.gz'),
+    PyModule('plone.app.openid', PLONE_GOOGLE + 'plone.app.openid-0.9.tar.gz'),
+    PyModule('plone.app.controlpanel', CHEESE_SOURCE + 'p/plone.app.controlpanel/plone.app.controlpanel-1.0a2.tar.gz'),
+    PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0a2.tar.gz'),
 ]
 
 
