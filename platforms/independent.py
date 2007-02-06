@@ -3,7 +3,7 @@ from dist_plone import Software, PyModule, ZProduct, Bundle
 BASE = 'http://osdn.dl.sourceforge.net/sourceforge/'
 
 PLONE_BASE = BASE + 'plone/'
-PLONE_BASE = 'http://home.wiggy.net/~wichert/'
+PLONE_BASE = 'http://antiloop.plone.org/download/'
 
 PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
@@ -49,6 +49,7 @@ PLONE_CORE = [
 ]
 
 PLONE_CORE_PACKAGES = [
+    PyModule('wicked', 'http://cheeseshop.python.org/packages/source/w/wicked/wicked-1.1.0.tar.gz'),
     PyModule('plone.portlets', 'http://antiloop.plone.org/download/plone.portlets-0.1dev-r11127.tar.gz'),
     PyModule('plone.app.portlets', 'http://antiloop.plone.org/download/plone.app.portlets-0.1dev-r11387.tar.gz'),
 ]
