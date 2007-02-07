@@ -63,6 +63,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.openid', PLONE_GOOGLE + 'plone.app.openid-0.9.tar.gz'),
     PyModule('plone.app.controlpanel', CHEESE_SOURCE + 'p/plone.app.controlpanel/plone.app.controlpanel-1.0a2.tar.gz'),
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0a2.tar.gz'),
+    PyModule('plone.app.linkintegrity', CHEESE_SOURCE + 'p/plone.app.linkintegrity/plone.app.linkintegrity-1.0a2.tar.gz'),
 ]
 
 
