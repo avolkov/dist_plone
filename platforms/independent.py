@@ -25,14 +25,14 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2/ATContentTypes-1.2-alpha1.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2/ATContentTypes-1.2-alpha2.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.7/ATReferenceBrowserWidget-1.7.1.tgz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1/CMFDynamicViewFTI-2.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.7/CMFFormController-2.0.7.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.2/CMFPlacefulWorkflow-1.0.2.tgz'),
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-3.0-alpha1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.0/CMFQuickInstallerTool-2.0.0.tar.gz'),
-    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3/CMFDiffTool-0.3.tgz'),
+    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.1/CMFDiffTool-0.3.1.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.2/GroupUserFolder-3.54.2.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.0/PlacelessTranslationService-1.4.0.tar.gz'),
@@ -48,7 +48,7 @@ PLONE_CORE = [
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.2/PasswordResetTool-0.4.2.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz', 'PluginRegistry-1.1.1'),
     ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.3.tar.gz'),
-    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-alpha1.tgz'),
+    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-alpha2.tgz'),
 
 # Test tools
     ZProduct('CMFTestCase', PLONE_ORG + 'cmftestcase/releases/0.9.0/CMFTestCase-0.9.0.tar.gz'),
