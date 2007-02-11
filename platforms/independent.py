@@ -15,7 +15,7 @@ CHEESE_SOURCE = 'http://cheeseshop.python.org/packages/source/'
 PLONE_CORE = [
     Bundle('CMF',
 #           'http://www.zope.org/Products/CMF/CMF-2.1.0-alpha2/CMF-2.1.0-alpha2.tar.gz',
-           'http://antiloop.plone.org/CMF-2.1-alpha2.1.tar.gz',
+           'http://antiloop.plone.org/download/CMF-2.1-alpha2.1.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -48,7 +48,7 @@ PLONE_CORE = [
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4.1/PluggableAuthService-1.4.1.tar.gz', 'PluggableAuthService-1.4.1'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.2/PasswordResetTool-0.4.2.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.1/PluginRegistry-1.1.1.tar.gz', 'PluginRegistry-1.1.1'),
-    ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.3.tar.gz'),
+    ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.4.tar.gz'),
     ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-alpha2.tgz'),
 
 # Test tools
