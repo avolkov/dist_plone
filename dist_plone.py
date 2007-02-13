@@ -100,6 +100,7 @@ class PyModule(Software):
 
     def post_extract(self, destination, me):
         cwd=os.getcwd()
+        me=me.split('/')[0]
         os.chdir(os.path.join(destination, me))
         res=subprocess.call(["python", "setup.py", "install_lib",
             "--install-dir=%s" % destination])
