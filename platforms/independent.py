@@ -79,6 +79,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.portlets', CHEESE_SOURCE + 'p/plone.portlets/plone.portlets-1.0a2.tar.gz'),
     PyModule('plone.session', PLONE_GOOGLE + 'plone.session-0.9.tar.gz'),
     PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.1.tar.gz'),
+    PyModule('five.customerize', CHEESE_SOURCE + 'f/five.customerize/five.customerize-0.1.1.tar.gz'),
 ]
 
 
