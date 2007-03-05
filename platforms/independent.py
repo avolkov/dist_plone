@@ -75,6 +75,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0a2.tar.gz'),
     PyModule('plone.app.workflow', CHEESE_SOURCE + 'p/plone.app.workflow/plone.app.workflow-1.0b1.tar.gz'),
     PyModule('plone.contentrules', CHEESE_SOURCE + 'p/plone.contentrules/plone.contentrules-1.0b1.tar.gz'),
+    PyModule('plone.intelligenttext', CHEESE_SOURCE + 'p/plone.intelligenttext/plone.intelligenttext-1.0-beta1.tar.gz'),
     PyModule('plone.locking', CHEESE_SOURCE + 'p/plone.locking/plone.locking-1.0b1.tar.gz'),
     PyModule('plone.memoize', CHEESE_SOURCE + 'p/plone.memoize/plone.memoize-1.0b1.tar.gz'),
     PyModule('plone.openid', PLONE_GOOGLE + 'plone.openid-0.9.tar.gz'),
