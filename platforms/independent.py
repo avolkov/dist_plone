@@ -66,7 +66,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.form', CHEESE_SOURCE + 'p/plone.app.form/plone.app.form-1.0b1.tar.gz'),
     PyModule('plone.app.i18n', CHEESE_SOURCE + 'p/plone.app.i18n/plone.app.i18n-1.0b2.tar.gz'),
     PyModule('plone.app.iterate', CHEESE_SOURCE + 'p/plone.app.iterate/plone.app.iterate-1.0b1.tar.gz'),
-    PyModule('plone.app.kss', CHEESE_SOURCE + 'p/plone.app.kss/plone.app.kss-1.2-beta1.tar.gz'),
+    PyModule('plone.app.kss', CHEESE_SOURCE + 'p/plone.app.kss/plone.app.kss-1.2-beta1.2.tar.gz'),
     PyModule('plone.app.layout', CHEESE_SOURCE + 'p/plone.app.layout/plone.app.layout-1.0b1.tar.gz'),
     PyModule('plone.app.linkintegrity', CHEESE_SOURCE + 'p/plone.app.linkintegrity/plone.app.linkintegrity-1.0b1.tar.gz'),
     PyModule('plone.app.openid', PLONE_GOOGLE + 'plone.app.openid-0.9.tar.gz'),
