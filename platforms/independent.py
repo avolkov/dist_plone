@@ -65,7 +65,7 @@ class Distribution:
 
     # this is what plone is based on
     python =  Software('python', 'http://python.org/ftp/python/2.4.4/Python-2.4.4.tgz')
-    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.9.6/Zope-2.9.6-final.tgz')
+    zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.9.7/Zope-2.9.7-final.tgz')
 
     # plone core
     core   = PLONE_CORE
