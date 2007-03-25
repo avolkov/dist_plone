@@ -29,7 +29,7 @@ PLONE_CORE = [
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/2.0/ATReferenceBrowserWidget-2.0b2.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1.1/CMFDynamicViewFTI-2.1.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1/CMFFormController-2.1b2.tar.gz'),
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0-beta1/CMFPlacefulWorkflow-1.2.0-beta1.tgz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0-beta1/CMFPlacefulWorkflow-1.2.0-beta2.tgz'),
     ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-alpha2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.2/CMFQuickInstallerTool-2.0.2b2.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.2/CMFDiffTool-0.3.2.tgz'),
