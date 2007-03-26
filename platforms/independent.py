@@ -30,7 +30,8 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1.1/CMFDynamicViewFTI-2.1.1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1/CMFFormController-2.1b2.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0-beta1/CMFPlacefulWorkflow-1.2.0-beta2.tgz'),
-    ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-alpha2.tar.gz'),
+    ZProduct('CMFPlone', 'file:///local/PLONERELEASE/PloneBase-3.0-alpha3.tar.gz'),
+#    ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-alpha2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.2/CMFQuickInstallerTool-2.0.2b2.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.2/CMFDiffTool-0.3.2.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
@@ -84,6 +85,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.session', CHEESE_SOURCE + 'p/plone.session/plone.session-1.0b1.tar.gz'),
     PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.1.tar.gz'),
     PyModule('five.customerize', CHEESE_SOURCE + 'f/five.customerize/five.customerize-0.1.1.tar.gz'),
+    PyModule('five.localsitemanager', CHEESE_SOURCE + 'f/five.localsitemanager/five.localsitemanager-0.1.1.tar.gz'),
 ]
 
 
