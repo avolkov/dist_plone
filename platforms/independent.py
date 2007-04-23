@@ -33,7 +33,7 @@ PLONE_CORE = [
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.6.0/CMFQuickInstallerTool-1.6.0.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.1/GroupUserFolder-3.54.1.tgz'),
-    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.6/PlacelessTranslationService-1.3.6.tar.gz'),
+    ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.7/PlacelessTranslationService-1.3.7.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.0/PloneTestCase-0.9.0.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/3.0.0/PloneTranslations-3.0.0.tar.gz'),
