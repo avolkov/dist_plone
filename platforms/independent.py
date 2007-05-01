@@ -32,7 +32,7 @@ PLONE_CORE = [
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0-beta3/CMFPlacefulWorkflow-1.2.0-beta3.tgz'),
     ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-beta1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.2/CMFQuickInstallerTool-2.0.2b2.tar.gz'),
-    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.2/CMFDiffTool-0.3.2.tgz'),
+    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.3/CMFDiffTool-0.3.3.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.4/GroupUserFolder-3.54.4.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.2/PlacelessTranslationService-1.4.2b2.tar.gz'),
