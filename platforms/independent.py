@@ -91,7 +91,7 @@ PLONE_CORE_PACKAGES = [
 
 ADDONS = [
     ZProduct('ExternalEditor', PLONE_ORG + 'external-editor/releases/0.9.3/ExternalEditor-0.9.3-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1.4b5.tgz')
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1.4b6.tgz')
 ]
 
 AT1_5 = [
