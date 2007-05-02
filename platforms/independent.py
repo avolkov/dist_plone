@@ -31,7 +31,7 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0/CMFDynamicViewFTI-3.0b1.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1/CMFFormController-2.1b3.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0-beta4/CMFPlacefulWorkflow-1.2.0-beta4.tgz'),
-    ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-beta1.tar.gz'),
+    ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-beta2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.2/CMFQuickInstallerTool-2.0.2b3.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.3/CMFDiffTool-0.3.3.tgz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
@@ -48,7 +48,7 @@ PLONE_CORE = [
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.3/PasswordResetTool-0.4.3.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
     ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.4.tar.gz'),
-    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-beta4.tar.gz'),
+    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-beta4.tgz'),
     ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.7/NuPlone-0.7.tgz'),
     ZProduct('AdvancedQuery', 'http://www.dieter.handshake.de/pyprojects/zope/AdvancedQuery.tgz'),
 
