@@ -34,8 +34,11 @@ PLONE_CORE = [
     ZProduct('CMFPlone', PLONE_GOOGLE + 'PloneBase-3.0-beta2.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.2/CMFQuickInstallerTool-2.0.2b3.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.3/CMFDiffTool-0.3.3.tgz'),
+    ZProduct('CMFTestCase', PLONE_ORG + 'cmftestcase/releases/0.9.0/CMFTestCase-0.9.0.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
+    ZProduct('ExternalEditor', PLONE_ORG + 'external-editor/releases/0.9.3/ExternalEditor-0.9.3-src.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.4/GroupUserFolder-3.54.4.tgz'),
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1.4b6.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.3/PlacelessTranslationService-1.4.3.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.3/PloneTestCase-0.9.3.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/3.0.1/PloneTranslations-3.0.1.tar.gz'),
@@ -51,9 +54,6 @@ PLONE_CORE = [
     ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1/CMFEditions-1.1-beta4.tgz'),
     ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.7/NuPlone-0.7.tgz'),
     ZProduct('AdvancedQuery', 'http://www.dieter.handshake.de/pyprojects/zope/AdvancedQuery.tgz'),
-
-# Test tools
-    ZProduct('CMFTestCase', PLONE_ORG + 'cmftestcase/releases/0.9.0/CMFTestCase-0.9.0.tar.gz'),
 ]
 
 PLONE_CORE_PACKAGES = [
@@ -91,8 +91,6 @@ PLONE_CORE_PACKAGES = [
 
 
 ADDONS = [
-    ZProduct('ExternalEditor', PLONE_ORG + 'external-editor/releases/0.9.3/ExternalEditor-0.9.3-src.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1.4b6.tgz')
 ]
 
 AT1_5 = [
@@ -111,12 +109,12 @@ class Distribution:
     zope   =  Software('zope'  , ZOPE_ORG + 'Zope/2.10.3/Zope-2.10.3-final.tgz')
 
     # plone core
-    core   = PLONE_CORE
+    core   = PLONE_CORE + AT1_5
     # plone core packages
     core_packages = PLONE_CORE_PACKAGES
 
     # plone addons
-    addons = ADDONS + AT1_5
+    addons = ADDONS
 
     # the readme.txt
     readme = README_TXT
