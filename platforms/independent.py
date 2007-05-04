@@ -73,6 +73,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.openid', CHEESE_SOURCE + 'p/plone.app.openid/plone.app.openid-1.0b2.tar.gz'),
     PyModule('plone.app.portlets', CHEESE_SOURCE + 'p/plone.app.portlets/plone.app.portlets-1.0b1.1.tar.gz'),
     PyModule('plone.app.redirector', CHEESE_SOURCE + 'p/plone.app.redirector/plone.app.redirector-1.0b2.tar.gz'),
+    PyModule('plone.app.viewletmanager', CHEESE_SOURCE + 'p/plone.app.viewletmanager/plone.app.viewletmanager-1.0b1.tar.gz'),
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0b3.tar.gz'),
     PyModule('plone.app.workflow', CHEESE_SOURCE + 'p/plone.app.workflow/plone.app.workflow-1.0b2.tar.gz'),
     PyModule('plone.contentrules', CHEESE_SOURCE + 'p/plone.contentrules/plone.contentrules-1.0b2.tar.gz'),
