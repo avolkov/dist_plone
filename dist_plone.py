@@ -492,7 +492,7 @@ class Plone:
                 self.plonepackage = destination
                 print "--> Used as Plone Package Version."
 
-        # Copy the CMFPlone README.txt to the toplegel
+        # Copy some documentation from inside CMFPlone to the toplevel
         docs = getattr(self.parameters.dist, 'documentation', ['README.txt'])
         for doc in docs:
             subprocess.call(["cp", os.path.join(self.plonepackage, doc), self.basefolder])

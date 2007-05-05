@@ -121,5 +121,5 @@ class Distribution:
     readme = README_TXT
 
     # documentation to copy to the tar root
-    documentation = [ 'README.txt', 'INSTALL.txt' ]
+    documentation = [ 'README.txt', 'INSTALL.txt', 'RELEASENOTES.txt' ]
 
