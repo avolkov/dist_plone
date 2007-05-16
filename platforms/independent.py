@@ -11,7 +11,7 @@ ZOPE_ORG = 'http://www.zope.org/Products/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           'http://www.zope.org/Products/CMF/CMF-1.6.4-beta/CMF-1.6.4-beta.tar.gz',
+           'http://www.zope.org/Products/CMF/CMF-1.6.4/CMF-1.6.4-final.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -23,13 +23,13 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.5/ATContentTypes-1.1.5.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.6/ATContentTypes-1.1.6.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.7/ATReferenceBrowserWidget-1.7.1.tgz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.2/CacheFu-1.0.2.tgz', 'CacheFu-1.0.2'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1.2/CMFDynamicViewFTI-2.1.2.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.8/CMFFormController-2.0.8.tar.gz'),
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.4/CMFPlacefulWorkflow-1.0.4.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.3-rc1.tar.gz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.5/CMFPlacefulWorkflow-1.0.5.tgz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.3-final.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.6.1/CMFQuickInstallerTool-1.6.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.3/GroupUserFolder-3.54.3.tgz'),
@@ -39,7 +39,7 @@ PLONE_CORE = [
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/3.0.2/PloneTranslations-3.0.2.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/1.7/PloneLanguageTool-1.7.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.5/SecureMailHost-1.0.5.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3.8/ResourceRegistries-1.3.8.tar.gz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3.9/ResourceRegistries-1.3.9.tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0.1/statusmessages-2.0.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.4/PlonePAS-2.4.tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4.2/PluggableAuthService-1.4.2.tar.gz', 'PluggableAuthService-1.4.2'),
@@ -53,7 +53,7 @@ ADDONS = [
 ]
 
 AT1_4 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.3/Archetypes-1.4.3-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.4/Archetypes-1.4.4-final-Bundle.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
