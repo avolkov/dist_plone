@@ -61,14 +61,16 @@ class Software:
     productdir_rename = None
     filename = None
     parent = None
+    version = None
 
     destination = 'downloads'
 
-    def __init__(self, name, download_url, productdir=None, archive_rename=None):
+    def __init__(self, name, download_url, productdir=None, archive_rename=None, version=None):
         self.name = name
         self.download_url = download_url
         self.productdir_rename = productdir
         self.archive_rename = archive_rename
+        self.version = version
 
 
 class Bundle(Software):
