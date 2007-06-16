@@ -323,10 +323,10 @@ class Plone:
             data.append(ob)
 
         # walk with our callback
-    for product in self.walk_products():
+        for product in self.walk_products():
             dl_callback(product)
 
-    for package in self.walk_packages():
+        for package in self.walk_packages():
             dl_callback(package)
 
         # close log file
