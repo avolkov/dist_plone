@@ -85,7 +85,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.openid', CHEESE_SOURCE + 'p/plone.openid/plone.openid-1.0b3.tar.gz', version="1.0b3"),
     PyModule('plone.portlets', CHEESE_SOURCE + 'p/plone.portlets/plone.portlets-1.0b3.tar.gz', version="1.0b3"),
     PyModule('plone.session', CHEESE_SOURCE + 'p/plone.session/plone.session-1.0b2.tar.gz', version="1.0b2"),
-    PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.1.tar.gz', version="1.1.1"),
+    PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.1.tar.gz', version="1.1.2"),
     PyModule('five.customerize', CHEESE_SOURCE + 'f/five.customerize/five.customerize-0.1.2.tar.gz', version="0.1.2"),
     PyModule('five.localsitemanager', CHEESE_SOURCE + 'f/five.localsitemanager/five.localsitemanager-0.1.1.tar.gz', version="0.1.1"),
 ]
