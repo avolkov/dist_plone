@@ -43,9 +43,9 @@ PLONE_CORE = [
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/3.0.3/PloneTranslations-3.0.3rc1.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/2.0/PloneLanguageTool-2.0rc1.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.1/SecureMailHost-1.1.tar.gz'),
-    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.4.0/ResourceRegistries-1.4.0-rc1.tgz'),
+    ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.4.0/resourceregistries-1.4.0-rc1.tgz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/3.0/statusmessages-3.0rc1.tar.gz'),
-    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/3.0/PlonePAS-3.0rc1.tar.gz'),
+    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/3.0/plonepas-3-0rc1-tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.5/PluggableAuthService-1.5.tar.gz', 'PluggableAuthService-1.5'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/1.0/PasswordResetTool-1.0rc1.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
@@ -56,7 +56,7 @@ PLONE_CORE = [
 ]
 
 PLONE_CORE_PACKAGES = [
-    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.2.1-rc1.tar.gz', version="1.2-rc1.1"),
+    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.2-rc1.1.tar.gz', version="1.2-rc1.1"),
     PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.2-rc1.1.tar.gz', version="1.2-rc1.1"),
     PyModule('plone.app.content', CHEESE_SOURCE + 'p/plone.app.content/plone.app.content-1.0rc1.tar.gz', version="1.0rc1"),
     PyModule('plone.app.contentmenu', CHEESE_SOURCE + 'p/plone.app.contentmenu/plone.app.contentmenu-1.0rc1.tar.gz', version="1.0rc1"),
