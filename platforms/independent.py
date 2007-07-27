@@ -38,7 +38,7 @@ PLONE_CORE = [
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('ExternalEditor', PLONE_ORG + 'external-editor/releases/0.9.3/ExternalEditor-0.9.3-src.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.4/GroupUserFolder-3.54.4.tgz'),
-    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1-4rc1.tgz'),
+    ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4/kupu-1-4rc2.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.4/PlacelessTranslationService-1.4.4.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.6/PloneTestCase-0.9.6.tar.gz'),
     ZProduct('PloneTranslations',PLONE_ORG + 'plonetranslations/releases/3.0.3/PloneTranslations-3.0.3rc1.tar.gz'),
