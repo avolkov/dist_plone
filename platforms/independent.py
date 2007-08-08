@@ -15,7 +15,7 @@ CHEESE_SOURCE = 'http://cheeseshop.python.org/packages/source/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           ZOPE_ORG + 'CMF/CMF-2.1.0-beta2/CMF-2.1.0-beta2.tar.gz',
+           ZOPE_ORG + 'CMF/CMF-2.1.0/CMF-2.1.0.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
@@ -23,10 +23,9 @@ PLONE_CORE = [
              'CMFTopic'   : ZProduct,
              'CMFUid'     : ZProduct,
              'DCWorkflow' : ZProduct,
-#             'GenericSetup' : ZProduct,
+             'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('GenricSetup', ZOPE_ORG + 'GenericSetup/GenericSetup-1.3-final/GenericSetup-1.3.tar.gz'),
     ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2/atcontenttypes-1-2-0-rc1.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/2.0/ATReferenceBrowserWidget-2.0rc1.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0/CMFDynamicViewFTI-3.0rc1.tar.gz'),
