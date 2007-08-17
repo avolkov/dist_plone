@@ -63,7 +63,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.contentmenu', CHEESE_SOURCE + 'p/plone.app.contentmenu/plone.app.contentmenu-1.0rc1.tar.gz', version="1.0"),
     PyModule('plone.app.contentrules', CHEESE_SOURCE + 'p/plone.app.contentrules/plone.app.contentrules-1.0.tar.gz', version="1.0"),
     PyModule('plone.app.controlpanel', CHEESE_SOURCE + 'p/plone.app.controlpanel/plone.app.controlpanel-1.0.tar.gz', version="1.0"),
-    PyModule('plone.app.customerize', CHEESE_SOURCE + 'p/plone.app.customerize/plone.app.customerize-1.0rc1.tar.gz', version="1.0rc1"),
+    PyModule('plone.app.customerize', CHEESE_SOURCE + 'p/plone.app.customerize/plone.app.customerize-1.0.tar.gz', version="1.0"),
     PyModule('plone.app.form', CHEESE_SOURCE + 'p/plone.app.form/plone.app.form-1.0.tar.gz', version="1.0"),
     PyModule('plone.app.i18n', CHEESE_SOURCE + 'p/plone.app.i18n/plone.app.i18n-1.0.tar.gz', version="1.0"),
     PyModule('plone.app.iterate', CHEESE_SOURCE + 'p/plone.app.iterate/plone.app.iterate-1.0.tar.gz', version="1.0"),
@@ -87,7 +87,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.session', CHEESE_SOURCE + 'p/plone.session/plone.session-1.0.tar.gz', version="1.0"),
     PyModule('plone.theme', CHEESE_SOURCE + 'p/plone.theme/plone.theme-1.0.tar.gz', version="1.0"),
     PyModule('wicked', CHEESE_SOURCE + 'w/wicked/wicked-1.1.6.tar.gz', version="1.1.6"),
-    PyModule('five.customerize', CHEESE_SOURCE + 'f/five.customerize/five.customerize-0.1.3.tar.gz', version="0.1.3"),
+    PyModule('five.customerize', CHEESE_SOURCE + 'f/five.customerize/five.customerize-0.2.tar.gz', version="0.2"),
     PyModule('five.localsitemanager', CHEESE_SOURCE + 'f/five.localsitemanager/five.localsitemanager-0.2.tar.gz', version="0.2"),
 ]
 
