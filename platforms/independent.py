@@ -52,7 +52,7 @@ PLONE_CORE = [
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
     ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.4.tar.gz'),
     ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1.1/CMFEditions-1.1.1.tgz'),
-    ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.9/NuPlone-0.9.tgz'),
+    ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.9/NuPlone-0.9.2.tgz'),
     ZProduct('AdvancedQuery', 'http://www.dieter.handshake.de/pyprojects/zope/AdvancedQuery.tgz'),
 ]
 
