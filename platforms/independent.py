@@ -31,7 +31,8 @@ PLONE_CORE = [
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0/CMFDynamicViewFTI-3.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1/CMFFormController-2.1.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.0/cmfplacefulworkflow-1-2-0.tgz'),
-    ZProduct('CMFPlone', PLONE_DIST + 'PloneBase-3.0.tar.gz'),
+#    ZProduct('CMFPlone', PLONE_DIST + 'PloneBase-3.0.tar.gz'),
+    ZProduct('CMFPlone', 'file:///local/PLONERELEASE/PloneBase-3.0.1.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.3/CMFQuickInstallerTool-2.0.3.tar.gz'),
     ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.4/cmfdifftool-0-3-4.tgz'),
     ZProduct('CMFTestCase', PLONE_ORG + 'cmftestcase/releases/0.9.6/CMFTestCase-0.9.6.tar.gz'),
@@ -96,7 +97,7 @@ ADDONS = [
 ]
 
 AT1_5 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.1.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.2.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
