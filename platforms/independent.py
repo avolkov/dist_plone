@@ -43,7 +43,7 @@ PLONE_CORE = [
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0.1/statusmessages-2.0.1.tar.gz'),
     ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.4/PlonePAS-2.4.tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4.2/PluggableAuthService-1.4.2.tar.gz', 'PluggableAuthService-1.4.2'),
-    ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.3/PasswordResetTool-0.4.3.tar.gz'),
+    ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.4/PasswordResetTool-0.4.4.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
 ]
 
