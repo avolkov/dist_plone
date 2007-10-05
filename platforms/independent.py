@@ -26,7 +26,7 @@ PLONE_CORE = [
            }
     ),
     ZProduct('GenericSetup', ZOPE_ORG + 'GenericSetup/GenericSetup-1.3.2/GenericSetup-1.3.2.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2.1/ATContentTypes-1.2.1-3.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2.2/ATContentTypes-1.2.2.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/2.0.1/ATReferenceBrowserWidget-2.0.1.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0/CMFDynamicViewFTI-3.0.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1/CMFFormController-2.1.tar.gz'),
@@ -51,7 +51,7 @@ PLONE_CORE = [
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/1.0/PasswordResetTool-1.0.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
     ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.4.tar.gz'),
-    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1.1/CMFEditions-1.1.1.tgz'),
+    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1.2/CMFEditions-1.1.2.tgz'),
     ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.9/NuPlone-0.9.2.tgz'),
     ZProduct('AdvancedQuery', 'http://www.dieter.handshake.de/pyprojects/zope/AdvancedQuery.tgz'),
 ]
