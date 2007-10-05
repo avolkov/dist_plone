@@ -23,16 +23,16 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.6/ATContentTypes-1.1.6.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.7/ATContentTypes-1.1.7.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.7.2/atreferencebrowserwidget-1-7-2.tgz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.3/CacheFu-1.0.3.tgz', 'CacheFu-1.0.3'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1.2/CMFDynamicViewFTI-2.1.2.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.9/CMFFormController-2.0.9.tar.gz'),
-    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.5/CMFPlacefulWorkflow-1.0.5.tgz'),
+    ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.6/CMFPlacefulWorkflow-1.0.6.tgz'),
     ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.3-final.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.6.1/CMFQuickInstallerTool-1.6.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
-    ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.3/GroupUserFolder-3.54.3.tgz'),
+    ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.4/GroupUserFolder-3.54.4.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.3.7/PlacelessTranslationService-1.3.7.tar.gz'),
     ZProduct('PloneErrorReporting',PLONE_ORG + 'ploneerrorreporting/releases/1.0/PloneErrorReporting-1.0.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.4/PloneTestCase-0.9.4.tar.gz'),
@@ -53,7 +53,7 @@ ADDONS = [
 ]
 
 AT1_4 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.4/Archetypes-1.4.4-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.5/Archetypes-1.4.5-final-Bundle.tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
