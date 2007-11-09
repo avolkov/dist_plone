@@ -11,7 +11,7 @@ PLONE_ORG = 'http://plone.org/products/'
 OSCOM_ORG = 'http://kupu.oscom.org/'
 ZOPE_ORG = 'http://www.zope.org/Products/'
 
-CHEESE_SOURCE = 'http://cheeseshop.python.org/packages/source/'
+CHEESE_SOURCE = 'http://pypi.python.org/packages/source/'
 
 PLONE_CORE = [
     Bundle('CMF',
