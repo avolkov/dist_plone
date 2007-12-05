@@ -23,13 +23,13 @@ PLONE_CORE = [
              'GenericSetup' : ZProduct,
            }
     ),
-    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.7/ATContentTypes-1.1.7-2.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.1.8/ATContentTypes-1.1.8-final.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/1.7.2/atreferencebrowserwidget-1-7-2.tgz'),
     ZProduct('CacheFu', PLONE_ORG + 'cachefu/releases/1.0.3/CacheFu-1.0.3.tgz', 'CacheFu-1.0.3'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/2.1.2/CMFDynamicViewFTI-2.1.2.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.0.10/CMFFormController-2.0.10.tar.gz'),
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.0.6/cmfplacefulworkflow-1-0-6.tgz'),
-    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.4-2.tar.gz'),
+    ZProduct('CMFPlone', PLONE_BASE + 'PloneBase-2.5.5.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/1.6.1/CMFQuickInstallerTool-1.6.1.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('GroupUserFolder', PLONE_ORG + 'groupuserfolder/releases/3.54.4/GroupUserFolder-3.54.4.tgz'),
@@ -41,7 +41,7 @@ PLONE_CORE = [
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.0.5/SecureMailHost-1.0.5.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.3.9/ResourceRegistries-1.3.9.tar.gz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/2.0.3/statusmessages-2.0.3.tar.gz'),
-    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.4/PlonePAS-2.4.tar.gz'),
+    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/2.5/PlonePAS-2.5.tar.gz'),
     ZProduct('PluggableAuthService', ZOPE_ORG + 'PluggableAuthService/PluggableAuthService-1.4.2/PluggableAuthService-1.4.2.tar.gz', 'PluggableAuthService-1.4.2'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/0.4.4/PasswordResetTool-0.4.4.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
@@ -53,7 +53,7 @@ ADDONS = [
 ]
 
 AT1_4 = [
-    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.5/Archetypes-1.4.5-final-Bundle.tar.gz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.4.6/archetypes-1-4-6-final-bundle-tar.gz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
