@@ -33,7 +33,7 @@ PLONE_CORE = [
     ZProduct('CMFPlacefulWorkflow', PLONE_ORG + 'cmfplacefulworkflow/releases/1.2.1/cmfplacefulworkflow-1-2-1.tgz'),
     ZProduct('CMFPlone', PLONE_DIST + 'PloneBase-3.0.4.tar.gz'),
     ZProduct('CMFQuickInstallerTool', PLONE_ORG + 'cmfquickinstallertool/releases/2.0.4/CMFQuickInstallerTool-2.0.4.tar.gz'),
-    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.4/cmfdifftool-0-3-4.tgz'),
+    ZProduct('CMFDiffTool', PLONE_ORG + 'cmfdifftool/releases/0.3.5/cmfdifftool-0-3-5.tgz'),
     ZProduct('CMFTestCase', PLONE_ORG + 'cmftestcase/releases/0.9.7/CMFTestCase-0.9.7.tar.gz'),
     ZProduct('ExtendedPathIndex', PLONE_ORG + 'extendedpathindex/releases/2.4/ExtendedPathIndex-2.4.tgz'),
     ZProduct('ExternalEditor', PLONE_ORG + 'external-editor/releases/0.9.3/ExternalEditor-0.9.3-src.tgz'),
