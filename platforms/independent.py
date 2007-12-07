@@ -51,7 +51,7 @@ PLONE_CORE = [
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/1.0/PasswordResetTool-1.0.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
     ZProduct('ZopeVersionControl', 'http://antiloop.plone.org/download/ZopeVersionControl-0.3.4.tar.gz'),
-    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1.2/CMFEditions-1.1.2.tgz'),
+    ZProduct('CMFEditions', PLONE_ORG + 'cmfeditions/releases/1.1.4/CMFEditions-1.1.4.tgz'),
     ZProduct('NuPlone', PLONE_ORG + 'nuplone/releases/0.9.3/NuPlone-0.9.3.tgz'),
     ZProduct('AdvancedQuery', 'http://www.dieter.handshake.de/pyprojects/zope/AdvancedQuery.tgz'),
 ]
