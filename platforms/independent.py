@@ -41,7 +41,7 @@ PLONE_CORE = [
     ZProduct('kupu', PLONE_ORG + 'kupu/releases/1.4.6/kupu-1-4-6.tgz'),
     ZProduct('PlacelessTranslationService',  PLONE_ORG + 'pts/releases/1.4.7/PlacelessTranslationService-1.4.7.tar.gz'),
     ZProduct('PloneTestCase',PLONE_ORG + 'plonetestcase/releases/0.9.7/PloneTestCase-0.9.7.tar.gz'),
-    ZProduct('PloneTranslations', PLONE_ORG + 'plonetranslations/releases/3.0.9/PloneTranslations-3.0.9.tar.gz'),
+    ZProduct('PloneTranslations', PLONE_ORG + 'plonetranslations/releases/3.0.10/PloneTranslations-3.0.10.tar.gz'),
     ZProduct('PloneLanguageTool', PLONE_ORG + 'plonelanguagetool/releases/2.0.1/PloneLanguageTool-2.0.1.tar.gz'),
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.1/SecureMailHost-1.1.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.4.1/resourceregistries-1-4-1.tgz'),
