@@ -15,7 +15,7 @@ CHEESE_SOURCE = 'http://pypi.python.org/packages/source/'
 
 PLONE_CORE = [
     Bundle('CMF',
-           ZOPE_ORG + 'CMF/CMF-2.1.0/CMF-2.1.0.tar.gz',
+           ZOPE_ORG + 'CMF/CMF-2.1.1/CMF-2.1.1.tar.gz',
            { 'CMFActionIcons': ZProduct,
              'CMFCalendar': ZProduct,
              'CMFCore'    : ZProduct,
