@@ -57,7 +57,7 @@ PLONE_CORE = [
 ]
 
 PLONE_CORE_PACKAGES = [
-    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.2.5.tar.gz', version="1.2.5"),
+    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.2.6.tar.gz', version="1.2.6"),
     PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.2.4.tar.gz', version="1.2.4"),
     PyModule('plone.app.content', CHEESE_SOURCE + 'p/plone.app.content/plone.app.content-1.0.1.tar.gz', version="1.0.1"),
     PyModule('plone.app.contentmenu', CHEESE_SOURCE + 'p/plone.app.contentmenu/plone.app.contentmenu-1.0.6.tar.gz', version="1.0.6"),
