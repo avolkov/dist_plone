@@ -80,6 +80,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.fieldsets', CHEESE_SOURCE + 'p/plone.fieldsets/plone.fieldsets-1.0.tar.gz', version="1.0"),
     PyModule('plone.i18n', CHEESE_SOURCE + 'p/plone.i18n/plone.i18n-1.0.3.tar.gz', version="1.0.3"),
     PyModule('plone.intelligenttext', CHEESE_SOURCE + 'p/plone.intelligenttext/plone.intelligenttext-1.0.1.tar.gz', version="1.0.1"),
+    PyModule('plone.keyring', CHEESE_SOURCE + 'p/plone.keyring/plone.keyring-1.0b1.tar.gz', version="1.0b1"),
     PyModule('plone.locking', CHEESE_SOURCE + 'p/plone.locking/plone.locking-1.0.5.tar.gz', version="1.0.5"),
     PyModule('plone.memoize', CHEESE_SOURCE + 'p/plone.memoize/plone.memoize-1.0.3.tar.gz', version="1.0.3"),
     PyModule('plone.openid', CHEESE_SOURCE + 'p/plone.openid/plone.openid-1.0.1.tar.gz', version="1.0.1"),
