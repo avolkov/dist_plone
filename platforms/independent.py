@@ -72,6 +72,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.linkintegrity', CHEESE_SOURCE + 'p/plone.app.linkintegrity/plone.app.linkintegrity-1.0.5.tar.gz', version="1.0.5"),
     PyModule('plone.app.openid', CHEESE_SOURCE + 'p/plone.app.openid/plone.app.openid-1.0.2.tar.gz', version="1.0.2"),
     PyModule('plone.app.portlets', CHEESE_SOURCE + 'p/plone.app.portlets/plone.app.portlets-1.0.6.tar.gz', version="1.0.6"),
+    PyModule('plone.app.protect', CHEESE_SOURCE + 'p/plone.app.protect/plone.app.protect-1.0b1.tar.gz', version="1.0b1"),
     PyModule('plone.app.redirector', CHEESE_SOURCE + 'p/plone.app.redirector/plone.app.redirector-1.0.5.tar.gz', version="1.0.5"),
     PyModule('plone.app.viewletmanager', CHEESE_SOURCE + 'p/plone.app.viewletmanager/plone.app.viewletmanager-1.0.tar.gz', version="1.0"),
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0.3.tar.gz', version="1.0.3"),
