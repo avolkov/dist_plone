@@ -99,7 +99,7 @@ ADDONS = [
 ]
 
 AT1_5 = [
-    ZProduct('Archetypes', PLONE_DIST + 'Archetypes-1.5.6.tgz'),
+    ZProduct('Archetypes', PLONE_ORG + 'archetypes/releases/1.5/Archetypes-1.5.7.tgz'),
 ]
 
 README_TXT = """Plone's README is in CMFPlone/README.txt
