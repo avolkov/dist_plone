@@ -23,9 +23,9 @@ PLONE_CORE = [
              'CMFTopic'   : ZProduct,
              'CMFUid'     : ZProduct,
              'DCWorkflow' : ZProduct,
-             'GenericSetup': ZProduct,
            }
     ),
+    ZProduct('GenericSetup', ZOPE_ORG + 'GenericSetup/GenericSetup-1.4.0-beta/GenericSetup-1.4.0-beta.tar.gz'),
     ZProduct('ATContentTypes', PLONE_GOOGLE + 'ATContentTypes-1.2.4.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/2.0.1/ATReferenceBrowserWidget-2.0.1.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0.1/CMFDynamicViewFTI-3.0.1.tar.gz'),
