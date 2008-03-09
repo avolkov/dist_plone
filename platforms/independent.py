@@ -58,6 +58,7 @@ PLONE_CORE = [
 
 PLONE_CORE_PACKAGES = [
     PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.4-alpha1.tar.gz', version="1.4-alpha1"),
+    PyModule('borg.localrole', CHEESE_SOURCE + 'b/borg.localrole/borg.localrole-2.0a1.tar.gz', version="2.0a1"),
     PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.4-alpha1.tar.gz', version="1.4-alpha1"),
     PyModule('kss.demo', CHEESE_SOURCE + 'k/kss.demo/kss.demo-1.4-alpha1.tar.gz', version="1.4-alpha1"),
     PyModule('plone.app.content', CHEESE_SOURCE + 'p/plone.app.content/plone.app.content-1.1.0.tar.gz', version="1.1.0"),
@@ -75,7 +76,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.portlets', CHEESE_SOURCE + 'p/plone.app.portlets/plone.app.portlets-1.1.0a1.tar.gz', version="1.1.0a1"),
     PyModule('plone.app.protect', CHEESE_SOURCE + 'p/plone.app.protect/plone.app.protect-1.0b1.tar.gz', version="1.0b1"),
     PyModule('plone.app.redirector', CHEESE_SOURCE + 'p/plone.app.redirector/plone.app.redirector-1.0.7.tar.gz', version="1.0.7"),
-    PyModule('plone.app.viewletmanager', CHEESE_SOURCE + 'p/plone.app.viewletmanager/plone.app.viewletmanager-1.0.tar.gz', version="1.0"),
+    PyModule('plone.app.viewletmanager', CHEESE_SOURCE + 'p/plone.app.viewletmanager/plone.app.viewletmanager-1.2.tar.gz', version="1.2"),
     PyModule('plone.app.vocabularies', CHEESE_SOURCE + 'p/plone.app.vocabularies/plone.app.vocabularies-1.0.4.tar.gz', version="1.0.4"),
     PyModule('plone.app.workflow', CHEESE_SOURCE + 'p/plone.app.workflow/plone.app.workflow-1.0.7.tar.gz', version="1.0.7"),
     PyModule('plone.browserlayer', CHEESE_SOURCE + 'p/plone.browserlayer/plone.browserlayer-1.0rc3.tar.gz', version="1.0rc3"),
