@@ -57,10 +57,10 @@ PLONE_CORE = [
 ]
 
 PLONE_CORE_PACKAGES = [
-    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.4-alpha1.tar.gz', version="1.4-alpha1"),
+    PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.4-rc1.tar.gz', version="1.4-rc1"),
     PyModule('borg.localrole', CHEESE_SOURCE + 'b/borg.localrole/borg.localrole-2.0a1.tar.gz', version="2.0a1"),
-    PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.4-alpha1.tar.gz', version="1.4-alpha1"),
-    PyModule('kss.demo', CHEESE_SOURCE + 'k/kss.demo/kss.demo-1.4-alpha1.tar.gz', version="1.4-alpha1"),
+    PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.4-rc1.tar.gz', version="1.4-rc1"),
+    PyModule('kss.demo', CHEESE_SOURCE + 'k/kss.demo/kss.demo-1.4-rc1.tar.gz', version="1.4-rc1"),
     PyModule('plone.app.content', CHEESE_SOURCE + 'p/plone.app.content/plone.app.content-1.1.0.tar.gz', version="1.1.0"),
     PyModule('plone.app.contentmenu', CHEESE_SOURCE + 'p/plone.app.contentmenu/plone.app.contentmenu-1.0.7.tar.gz', version="1.0.7"),
     PyModule('plone.app.contentrules', CHEESE_SOURCE + 'p/plone.app.contentrules/plone.app.contentrules-1.1.0a1.tar.gz', version="1.1.0a1"),
@@ -69,7 +69,7 @@ PLONE_CORE_PACKAGES = [
     PyModule('plone.app.form', CHEESE_SOURCE + 'p/plone.app.form/plone.app.form-1.1rc1.tar.gz', version="1.1rc1"),
     PyModule('plone.app.i18n', CHEESE_SOURCE + 'p/plone.app.i18n/plone.app.i18n-1.0.3.tar.gz', version="1.0.3"),
     PyModule('plone.app.iterate', CHEESE_SOURCE + 'p/plone.app.iterate/plone.app.iterate-1.1rc1.tar.gz', version="1.1rc1"),
-    PyModule('plone.app.kss', CHEESE_SOURCE + 'p/plone.app.kss/plone.app.kss-1.4-alpha1.tar.gz', version="1.4-alpha1"),
+    PyModule('plone.app.kss', CHEESE_SOURCE + 'p/plone.app.kss/plone.app.kss-1.4-rc1.tar.gz', version="1.4-rc1"),
     PyModule('plone.app.layout', CHEESE_SOURCE + 'p/plone.app.layout/plone.app.layout-1.1.0a1.tar.gz', version="1.1.0a1"),
     PyModule('plone.app.linkintegrity', CHEESE_SOURCE + 'p/plone.app.linkintegrity/plone.app.linkintegrity-1.0.6.tar.gz', version="1.0.6"),
     PyModule('plone.app.openid', CHEESE_SOURCE + 'p/plone.app.openid/plone.app.openid-1.0.2.tar.gz', version="1.0.2"),
