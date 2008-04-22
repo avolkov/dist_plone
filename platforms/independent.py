@@ -58,7 +58,7 @@ PLONE_CORE = [
 
 PLONE_CORE_PACKAGES = [
     PyModule('archetypes.kss', CHEESE_SOURCE + 'a/archetypes.kss/archetypes.kss-1.4.tar.gz', version="1.4"),
-    PyModule('borg.localrole', CHEESE_SOURCE + 'b/borg.localrole/borg.localrole-2.0.tar.gz', version="2.0"),
+    PyModule('borg.localrole', CHEESE_SOURCE + 'b/borg.localrole/borg.localrole-2.0.0.tar.gz', version="2.0.0"),
     PyModule('kss.core', CHEESE_SOURCE + 'k/kss.core/kss.core-1.4.tar.gz', version="1.4"),
     PyModule('kss.demo', CHEESE_SOURCE + 'k/kss.demo/kss.demo-1.4.tar.gz', version="1.4"),
     PyModule('plone.app.content', CHEESE_SOURCE + 'p/plone.app.content/plone.app.content-1.2.tar.gz', version="1.2"),
