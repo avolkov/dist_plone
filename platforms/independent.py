@@ -26,7 +26,7 @@ PLONE_CORE = [
            }
     ),
     ZProduct('GenericSetup', ZOPE_ORG + 'GenericSetup/GenericSetup-1.4.0/GenericSetup-1.4.0.tar.gz'),
-    ZProduct('ATContentTypes', PLONE_GOOGLE + 'ATContentTypes-1.2.4.tgz'),
+    ZProduct('ATContentTypes', PLONE_ORG + 'atcontenttypes/releases/1.2.5/ATContentTypes-1.2.5.tgz'),
     ZProduct('ATReferenceBrowserWidget', PLONE_ORG + 'atreferencebrowserwidget/releases/2.0.1/ATReferenceBrowserWidget-2.0.1.tar.gz'),
     ZProduct('CMFDynamicViewFTI', PLONE_ORG + 'cmfdynamicviewfti/releases/3.0.2/CMFDynamicViewFTI-3.0.2.tar.gz'),
     ZProduct('CMFFormController', PLONE_ORG + 'cmfformcontroller/releases/2.1.2/CMFFormController-2.1.2.tar.gz'),
