@@ -104,7 +104,7 @@ class PyModule(Software):
         cwd=os.getcwd()
         me=me.split('/')[0]
         os.chdir(os.path.join(destination, me))
-        res=subprocess.call(["python", "setup.py", "install_lib",
+        res=subprocess.call(["python2.4", "setup.py", "install_lib",
             "--install-dir=%s" % destination])
         if res!=0:
             raise RuntimeError, "Failed to setup package"
