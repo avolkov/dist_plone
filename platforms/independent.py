@@ -46,7 +46,7 @@ PLONE_CORE = [
     ZProduct('SecureMailHost', PLONE_ORG + 'securemailhost/releases/1.1/SecureMailHost-1.1.tar.gz'),
     ZProduct('ResourceRegistries', PLONE_ORG + 'resourceregistries/releases/1.4.2/resourceregistries-1-4-2.tgz'),
     ZProduct('statusmessages', PLONE_ORG + 'statusmessages/releases/3.0.3/statusmessages-3.0.3-tar.gz'),
-    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/3.5/PlonePAS-3.5.tar.gz'),
+    ZProduct('PlonePAS', PLONE_ORG + 'plonepas/releases/3.6/PlonePAS-3.6.tar.gz'),
     ZProduct('PluggableAuthService', PLONE_DIST + 'PluggableAuthService-1.5.3.tar.gz'),
     ZProduct('PasswordResetTool', PLONE_ORG + 'passwordresettool/releases/1.1/PasswordResetTool-1.1.tar.gz'),
     ZProduct('PluginRegistry', ZOPE_ORG + 'PluginRegistry/PluginRegistry-1.1.2/PluginRegistry-1.1.2.tar.gz', 'PluginRegistry-1.1.2'),
