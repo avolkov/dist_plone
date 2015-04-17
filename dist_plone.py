@@ -34,11 +34,16 @@ This script:
  -- Alexander Limi
 """
 
-import itarfile as tarfile # NOTE: pythons tarfile is borked, itarfile is a patched version
+# NOTE: pythons tarfile is borked, itarfile is a patched version
+from . import itarfile as tarfile
 import zipfile
 import time
-import os, getopt, sys, subprocess
-import tempfile, urllib
+import os
+import getopt
+import sys
+import subprocess
+import tempfile
+import urllib
 import urlparse
 
 from distutils.dir_util import mkpath, copy_tree, remove_tree
@@ -51,7 +56,9 @@ __version__ = "$Revision: 1.15 $"[11:-1]
 sourceforge_mirrors = ("umn osdn switch jaist heanet ovh "
                        "belnet kent easynews puzzle").split()
 
+
 class Software:
+
     """ general software """
     type = 'Software'
 
@@ -65,7 +72,8 @@ class Software:
 
     destination = 'downloads'
 
-    def __init__(self, name, download_url, productdir=None, archive_rename=None, version=None):
+    def __init__(self, name, download_url, productdir=None,
+                 archive_rename=None, version=None):
         self.name = name
         self.download_url = download_url
         self.productdir_rename = productdir
@@ -74,6 +82,7 @@ class Software:
 
 
 class Bundle(Software):
+
     """ a archive which contains multiple other parts """
 
     type = 'Bundle'
@@ -90,32 +99,33 @@ class Bundle(Software):
         self.items = []
         for n, k in mapping.items():
             c = k(n, None)
-            c.parent = self # set ourselfs as source for this file
+            c.parent = self  # set ourselfs as source for this file
             self.items.append(c)
 
 
 class PyModule(Software):
+
     """ python module """
 
     type = 'PyModule'
     destination = 'lib/python'
 
     def post_extract(self, destination, me):
-        cwd=os.getcwd()
-        me=me.split('/')[0]
+        cwd = os.getcwd()
+        me = me.split('/')[0]
         os.chdir(os.path.join(destination, me))
-        res=subprocess.call(["python2.4", "setup.py", "install_lib",
-            "--install-dir=%s" % destination])
-        if res!=0:
-            raise RuntimeError, "Failed to setup package"
+        res = subprocess.call(["python2.4", "setup.py", "install_lib",
+                               "--install-dir=%s" % destination])
+        if res != 0:
+            raise RuntimeError("Failed to setup package")
 
         os.chdir(destination)
         subprocess.call(["rm", "-rf", me])
         os.chdir(cwd)
-        
 
 
 class ZProduct(Software):
+
     """ zope product """
 
     type = 'ZProduct'
@@ -128,13 +138,14 @@ class Parameters:
 
     def feed(self, p, arg):
         setattr(self, p, arg)
-        if not self.given(p): self._eaten.append(p)
+        if not self.given(p):
+            self._eaten.append(p)
 
     def given(self, p):
         return p in self._eaten
 
 
-USAGE="""Plone Distribution script %s.
+USAGE = """Plone Distribution script %s.
 Usage: python dist_plone.py [--download|--build] [OPTION]...
 
 %sParameters:
@@ -160,7 +171,15 @@ class Plone:
 
     # getopt command line parameters
     short_options = ""
-    long_options = ["help", "target=", "modules=", "dest=", "core", "build", "download", "downloaddir="]
+    long_options = [
+        "help",
+        "target=",
+        "modules=",
+        "dest=",
+        "core",
+        "build",
+        "download",
+        "downloaddir="]
 
     def setup(self):
         self.basefolder = tempfile.mkdtemp()
@@ -170,8 +189,10 @@ class Plone:
 
         if not self.parameters.given('dest'):
             dest = os.path.join(self.parameters.dest, 'build')
-            try: os.mkdir(dest)
-            except: pass
+            try:
+                os.mkdir(dest)
+            except:
+                pass
             self.parameters.feed('dest', dest)
 
     def run(self, command):
@@ -248,8 +269,13 @@ class Plone:
 
         # get distribution
         if not modules:
-            load='platforms.%s' % target
-            try: Distribution = __import__(load, globals(), locals(), 'Distribution')
+            load = 'platforms.%s' % target
+            try:
+                Distribution = __import__(
+                    load,
+                    globals(),
+                    locals(),
+                    'Distribution')
             except:
                 raise
                 Distribution = None
@@ -257,15 +283,22 @@ class Plone:
             try:
                 fp, pathname, description = find_module(target, [modules])
                 try:
-                    Distribution = load_module(target, fp, pathname, description)
+                    Distribution = load_module(
+                        target,
+                        fp,
+                        pathname,
+                        description)
                 finally:
-                    if fp: fp.close()
+                    if fp:
+                        fp.close()
             except ImportError:
-                errors.append("Target module '%s' cannot be found in '%s'" % (target, modules))
+                errors.append(
+                    "Target module '%s' cannot be found in '%s'" %
+                    (target, modules))
                 Distribution = None
         if Distribution:
             Distribution = Distribution.Distribution
-            dist=Distribution()
+            dist = Distribution()
         else:
             errors.append('Platform %s is not supported' % target)
 
@@ -286,22 +319,25 @@ class Plone:
         self.build()
         self.cleanup()
 
-
     def download(self):
 
         download_destination = self.basefolder
-        if not self.parameters.given('build') and self.parameters.given('dest'):
-            download_destination=self.parameters.dest
+        if not self.parameters.given(
+                'build') and self.parameters.given('dest'):
+            download_destination = self.parameters.dest
         if self.parameters.given('downloaddir'):
-            download_destination=self.parameters.downloaddir
+            download_destination = self.parameters.downloaddir
         if not os.path.exists(download_destination):
             os.makedirs(download_destination)
 
         contents = os.path.join(download_destination, 'CONTENTS.txt')
         contents = open(contents, "w")
-        contents.write("The following packages were downloaded at %s.\n" % time.asctime())
+        contents.write(
+            "The following packages were downloaded at %s.\n" %
+            time.asctime())
 
         data = []
+
         def dl_callback(ob):
             if ob.archive_rename:
                 filename = ob.archive_rename
@@ -335,28 +371,25 @@ class Plone:
         # store our data
         self.data = data
 
-
     def walk_products(self):
         dist = self.parameters.dist
         walk = ('core',)
         if not self.parameters.given('core'):
-            walk=walk+('addons', )
+            walk = walk + ('addons', )
 
         for w in walk:
             for c in getattr(dist, w, []):
                 yield c
-
 
     def walk_packages(self):
         dist = self.parameters.dist
         walk = ('core_packages',)
         if not self.parameters.given('core'):
-            walk=walk+('addons_packages', )
+            walk = walk + ('addons_packages', )
 
         for w in walk:
             for c in getattr(dist, w, []):
                 yield c
-
 
     def build(self):
         if not self.parameters.given('build'):
@@ -365,6 +398,7 @@ class Plone:
         got = self.data
 
         items = []
+
         def expand(ob):
             if hasattr(ob,  'items'):
                 for item in ob.items:
@@ -377,13 +411,13 @@ class Plone:
             expand(item)
 
         # check if we have products only
-        products = [x for x in items if x.type=='ZProduct']
+        products = [x for x in items if x.type == 'ZProduct']
 
         # check if we only got products
         if len(products) == len(items):
             # if we only have products reset their destination
             for ob in items:
-                ob.destination=''
+                ob.destination = ''
 
         # move stuff to their destinations
         for ob in items:
@@ -394,9 +428,9 @@ class Plone:
             search = None
             if ob.parent:
                 search = ob.name
-                ob=ob.parent
-                move=os.path.join(destination, search)
-                destination=os.path.join(self.basefolder, ob.destination)
+                ob = ob.parent
+                move = os.path.join(destination, search)
+                destination = os.path.join(self.basefolder, ob.destination)
 
             filename = ob.filename
 
@@ -408,45 +442,51 @@ class Plone:
 
             # determine type
             if tarfile.is_tarfile(filename):
-                ar = tarfile.TarFileCompat(filename,'r',tarfile.TAR_GZIPPED)
+                ar = tarfile.TarFileCompat(filename, 'r', tarfile.TAR_GZIPPED)
             elif zipfile.is_zipfile(filename):
                 ar = zipfile.ZipFile(filename)
             else:
-                raise IOError, "file '%s' is of unusable archive type. Only ZIP and compressed TAR files can be handled." % filename
+                raise IOError(
+                    "file '%s' is of unusable archive type. Only ZIP and compressed TAR files can be handled." %
+                    filename)
 
             # do extraction
             productdir_rename = ob.productdir_rename
-            base=''
+            base = ''
             for f in ar.namelist():
                 # zipfile returns dirs, tarfile compat does not. ignore dirs
                 if not os.path.split(f)[1]:
                     continue
-                need=1
+                need = 1
                 if search:           # do we need to include this directory?
-                    need=0
+                    need = 0
                     name = f.split('/')
                     if len(name):
                         if name[0] == search:
-                            need=1
-                        elif len(name)>1 and name[1] == search:
-                            need=1
+                            need = 1
+                        elif len(name) > 1 and name[1] == search:
+                            need = 1
                 if need:
-                    try: base=name[0]
-                    except: pass
+                    try:
+                        base = name[0]
+                    except:
+                        pass
 
                     # do Product directory rename if needed
                     if productdir_rename and f.find(productdir_rename) == 0:
-                        new_f = f[len(productdir_rename)+1:]
+                        new_f = f[len(productdir_rename) + 1:]
                         new_f = os.path.join(ob.name, new_f)
-                        ext_fname = os.path.join(destination,new_f)
+                        ext_fname = os.path.join(destination, new_f)
                     else:
-                        ext_fname = os.path.join(destination,f)
+                        ext_fname = os.path.join(destination, f)
 
                     # make destination directories and do extraction
-                    try: os.makedirs(os.path.split(ext_fname)[0])
-                    except OSError: pass
+                    try:
+                        os.makedirs(os.path.split(ext_fname)[0])
+                    except OSError:
+                        pass
                     data = ar.read(f)
-                    dest = open(ext_fname,'w')
+                    dest = open(ext_fname, 'w')
                     dest.write(data)
                     dest.close()
                 else:
@@ -456,12 +496,12 @@ class Plone:
             ar.close()
 
             if hasattr(ob, 'post_extract'):
-                maindir=os.path.split(f)[0]
+                maindir = os.path.split(f)[0]
                 ob.post_extract(destination, maindir)
 
             # move directory if needed
             if move:
-                source = os.path.join(destination,base,search)
+                source = os.path.join(destination, base, search)
                 destination = move
                 copy_tree(source, destination)
                 remove_tree(os.path.split(source)[0])
@@ -472,7 +512,7 @@ class Plone:
             try:
                 contents = os.listdir(destination)
                 check = [x.lower() for x in contents]
-                index=check.index('version.txt')
+                index = check.index('version.txt')
             except:
                 index = []
             if index != []:
@@ -497,8 +537,9 @@ class Plone:
         # Copy some documentation from inside CMFPlone to the toplevel
         docs = getattr(self.parameters.dist, 'documentation', ['README.txt'])
         for doc in docs:
-            subprocess.call(["cp", os.path.join(self.plonepackage, doc), self.basefolder])
-        
+            subprocess.call(
+                ["cp", os.path.join(self.plonepackage, doc), self.basefolder])
+
         # cleanup for packaging
         if not self.parameters.given('downloaddir'):
             for ob in self.data:
@@ -507,12 +548,13 @@ class Plone:
 
         # Remove generate .pyc files
         subprocess.call(["find", self.basefolder, "-name", "*.pyc",
-            "-exec", "rm", "{}", ";"])
+                         "-exec", "rm", "{}", ";"])
 
         # check for empty folders in base
         for f in os.listdir(self.basefolder):
-            f=os.path.join(self.basefolder, f)
-            if not os.path.isdir(f): continue
+            f = os.path.join(self.basefolder, f)
+            if not os.path.isdir(f):
+                continue
             else:
                 if not len(os.listdir(f)):
                     # remove empty folders
@@ -520,18 +562,19 @@ class Plone:
 
         # XXX: hack
         # actually remove PloneTranslations
-        #if "PloneTranslations" in os.listdir(self.basefolder):
+        # if "PloneTranslations" in os.listdir(self.basefolder):
         #    f = os.path.join(self.basefolder, "PloneTranslations")
         #    remove_tree(f)
 
         # create new package
         name = getattr(self.parameters.dist, 'name', 'Plone')
         version = getattr(self.parameters.dist, 'version', self.version)
-        if self.parameters.given('core'): name="%sCore" % name
+        if self.parameters.given('core'):
+            name = "%sCore" % name
         target = self.parameters.dist.target.lower()
         name = "%s-%s" % (name, version)
         if target not in ('independent',):
-            name="%s-%s" % (name, target)
+            name = "%s-%s" % (name, target)
         filename = "%s.tar.gz" % name
         print "Creating Tarball %s." % filename
         filename = os.path.join(self.parameters.dest, filename)
@@ -544,12 +587,11 @@ class Plone:
 
         print "Wrote Tarball to %s" % filename
 
-
-
     def cleanup(self):
         print "Cleaning up %s." % self.basefolder
         remove_tree(self.basefolder)
         pass
+
 
 class TheHook:
 
@@ -581,12 +623,13 @@ class TheHook:
             sys.stdout.write(' [%3d%%]\n' % done)
             sys.stdout.flush()
 
+
 def retrieve_file(source, filename):
     mirrors = None
     while True:
         try:
             urllib.urlretrieve(source, filename, reporthook=TheHook())
-        except IOError, msg:
+        except IOError as msg:
             print "Failed to retrieve '%s'" % source
             if not source.find('sourceforge') > 0:
                 raise
@@ -597,7 +640,7 @@ def retrieve_file(source, filename):
             try:
                 netloc = '.'.join([mirrors.next()] + parts[1:])
             except StopIteration:
-                raise IOError, msg
+                raise IOError(msg)
             source = urlparse.urlunsplit((scheme, netloc, path,
                                           query, fragment))
             print "Retrying with '%s'" % source
@@ -607,7 +650,5 @@ def retrieve_file(source, filename):
 
 # main class
 if __name__ == '__main__':
-    plone=Plone()
+    plone = Plone()
     plone.main()
-
-
